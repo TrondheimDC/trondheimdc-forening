@@ -1,6 +1,7 @@
 {
   "notFound": "Ikke funnet",
   "menu": {
+    "skipToContent": "Hopp til innhold",
     "home": "Hjem",
     "groups": "Faggrupper",
     "archive": "Arkiv",

@@ -1,6 +1,7 @@
 {
   "notFound": "Not found",
   "menu": {
+    "skipToContent": "Skip to content",
     "home": "Home",
     "groups": "Communities",
     "archive": "Archive",
