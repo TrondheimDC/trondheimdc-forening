@@ -15,24 +15,29 @@ const LYKT_2025 = [6950, 7160, 6932, 7071, 7075, 7159]
 
 const PHOTOS = [
   {
-    src: "/img/photos/tdc-duck-clarion.jpg",
+    src: "/img/photos/tdc-duck-clarion.webp",
     alt: "TDC-duken utenfor Clarion Hotel Trondheim",
     portrait: true,
     credit: undefined,
   },
   ...LYKT_2025.map((n) => ({
-    src: `/img/photos/tdc2025-lykt-${n}.jpg`,
+    src: `/img/photos/tdc2025-lykt-${n}.webp`,
     alt: "Fra TDC 2025",
     portrait: false,
     credit: CREDIT_LYKT,
   })),
   ...YEARS_2024.map((n) => ({
-    src: `/img/photos/tdc2024-${n}.jpg`,
+    src: `/img/photos/tdc2024-${n}.webp`,
     alt: "Fra TDC 2024",
     portrait: false,
     credit: CREDIT_TERJE_TROBE,
   })),
 ]
+
+// The strip renders these ~320px wide but the lightbox blows them up to fill
+// the viewport, so scripts/optimize-images.mjs writes two copies of each and
+// the strip asks for the small one.
+const thumb = (src: string) => src.replace(/\.webp$/, "-thumb.webp")
 
 export const PhotoStrip = () => {
   const [index, setIndex] = useState(-1)
@@ -57,7 +62,7 @@ export const PhotoStrip = () => {
             }
           >
             <Image
-              src={photo.src}
+              src={thumb(photo.src)}
               alt={photo.alt}
               lang="no"
               fill
