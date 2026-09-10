@@ -1,0 +1,78 @@
+{
+  "notFound": "Ikke funnet",
+  "menu": {
+    "home": "Hjem",
+    "groups": "Faggrupper",
+    "archive": "Arkiv",
+    "stotte": "Støtte",
+    "vedtekter": "Vedtekter",
+    "themeLabel": "Tema",
+    "themeLight": "Lys",
+    "themeDark": "Mørk",
+    "themeSystem": "System"
+  },
+  "hero": {
+    "kicker": "Foreningen bak TDC",
+    "title": "TrondheimDC",
+    "subtitle": "Vi arrangerer TDC-konferansen, og bruker overskuddet på å støtte det frivillige teknologimiljøet i Trondheim resten av året.",
+    "ctaGroups": "Se faggruppene",
+    "ctaStotte": "Søk om støtte"
+  },
+  "about": {
+    "title": "Hva vi gjør",
+    "p1": "TDC arrangeres av et tverrsnitt av ulike teknologimiljøer i Trondheimsregionen. Målet er en ikke-kommersiell, frivillig drevet konferanse hvor teknologientusiaster kan lære av hverandre, dele kunnskap og møtes.",
+    "p2": "Alt eventuelt overskudd fra konferansen brukes til å drive fram neste års konferanse og til å støtte arrangementer i Trondheim organisert av ulike teknologigrupperinger. I vedtektene er det slått fast at foreningen skal støtte det lokale, frivillige IT-fagmiljøet gjennom finansielle støtteordninger.",
+    "p3": "Vi har drevet konferansen siden 2012."
+  },
+  "groups": {
+    "title": "Faggrupper i Trondheim",
+    "subtitle": "En uavhengig indeks over faggrupper i Trondheimsregionen — ikke bare de vi støtter økonomisk.",
+    "visit": "Besøk faggruppen",
+    "addYours": {
+      "title": "Mangler gruppa di?",
+      "body": "Send oss en e-post, så legger vi dere til på lista.",
+      "cta": "connect@trondheimdc.no"
+    }
+  },
+  "archive": {
+    "title": "Tidligere konferanser",
+    "subtitle": "TDC har blitt arrangert siden 2012.",
+    "notHeld": "Ikke avholdt",
+    "communityWeek": "TDC Community Week",
+    "current": "Årets konferanse",
+    "screenshotAlt": "Skjermbilde av TDC {{year}}-nettsiden"
+  },
+  "stotte": {
+    "title": "Støtte til faggrupper",
+    "intro": "Foreningen skal støtte det lokale, frivillige IT-fagmiljøet i Trondheimsregionen. Under er kriteriene for hva vi kan bidra til.",
+    "criteriaTitle": "Hvem kan søke?",
+    "criteria": [
+      "Arrangementet må finne sted i Trondheimsregionen.",
+      "Arrangementet må være gratis og åpent for alle som ønsker å delta.",
+      "Arrangementet må ha et tydelig fokus på teknologi, design eller kreativitet, relevant for TDC-samfunnet."
+    ],
+    "categoriesTitle": "Hva kan det søkes støtte til?",
+    "categories": [
+      "Leie av egnede lokaler",
+      "Mat og bespisning på arrangementet",
+      "Reiseutgifter for foredragsholdere",
+      "Abonnement på meetup.com"
+    ],
+    "closingTitle": "Slik søker du",
+    "closing": "Ta kontakt på e-post, så finner vi ut av det sammen. Fortell kort om arrangementet — tema, målgruppe og hva dere ønsker at vi skal dekke.",
+    "email": "connect@trondheimdc.no",
+    "reimburseTitle": "Har du allerede lagt ut for noe?",
+    "reimburseBody": "Bruk utleggsskjemaet vårt for å få pengene tilbake.",
+    "reimburseCta": "utlegg.trondheimdc.no"
+  },
+  "vedtekter": {
+    "title": "Vedtekter",
+    "note": "Vedtektene finnes kun på norsk, da dette er det juridisk gjeldende dokumentet for foreningen."
+  },
+  "footer": {
+    "utlegg": "Utleggsskjema",
+    "contact": "connect@trondheimdc.no",
+    "orgNr": "Org.nr",
+    "address": "Postboks 1275 Torgarden, 7462 Trondheim"
+  }
+}

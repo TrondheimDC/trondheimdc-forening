@@ -1,0 +1,78 @@
+{
+  "notFound": "Not found",
+  "menu": {
+    "home": "Home",
+    "groups": "Special interest groups",
+    "archive": "Archive",
+    "stotte": "Support",
+    "vedtekter": "Bylaws",
+    "themeLabel": "Theme",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSystem": "System"
+  },
+  "hero": {
+    "kicker": "The association behind TDC",
+    "title": "TrondheimDC",
+    "subtitle": "We run the TDC conference, and use the surplus to support the volunteer tech community in Trondheim the rest of the year.",
+    "ctaGroups": "See the special interest groups",
+    "ctaStotte": "Apply for support"
+  },
+  "about": {
+    "title": "What we do",
+    "p1": "TDC is organised by a cross-section of tech communities in the Trondheim region. The goal is a non-commercial, volunteer-run conference where technology enthusiasts can learn from each other, share knowledge, and meet.",
+    "p2": "Any surplus from the conference goes toward running next year's conference, and toward supporting events in Trondheim organised by different tech groups. Our bylaws explicitly state that the association shall support the local, volunteer-run IT community through financial support schemes.",
+    "p3": "We have run the conference since 2012."
+  },
+  "groups": {
+    "title": "Special interest groups in Trondheim",
+    "subtitle": "An independent index of special interest groups in the Trondheim region — not just the ones we fund.",
+    "visit": "Visit the group",
+    "addYours": {
+      "title": "Is your group missing?",
+      "body": "Email us and we'll add you to the list.",
+      "cta": "connect@trondheimdc.no"
+    }
+  },
+  "archive": {
+    "title": "Past conferences",
+    "subtitle": "TDC has run since 2012.",
+    "notHeld": "Not held",
+    "communityWeek": "TDC Community Week",
+    "current": "This year's conference",
+    "screenshotAlt": "Screenshot of the TDC {{year}} website"
+  },
+  "stotte": {
+    "title": "Support for special interest groups",
+    "intro": "The association exists to support the local, volunteer-run IT community in the Trondheim region. Below are the criteria for what we can contribute to.",
+    "criteriaTitle": "Who can apply?",
+    "criteria": [
+      "The event must take place in the Trondheim region.",
+      "The event must be free and open to anyone who wants to attend.",
+      "The event must have a clear focus on technology, design, or creativity, relevant to the TDC community."
+    ],
+    "categoriesTitle": "What can you apply for?",
+    "categories": [
+      "Renting a suitable venue",
+      "Food at the event",
+      "Travel expenses for speakers",
+      "Meetup.com subscription"
+    ],
+    "closingTitle": "How to apply",
+    "closing": "Get in touch by email and we'll figure it out together. Briefly describe the event — theme, audience, and what you'd like us to cover.",
+    "email": "connect@trondheimdc.no",
+    "reimburseTitle": "Already paid for something?",
+    "reimburseBody": "Use our expense form to get reimbursed.",
+    "reimburseCta": "utlegg.trondheimdc.no"
+  },
+  "vedtekter": {
+    "title": "Bylaws",
+    "note": "The bylaws are only available in Norwegian, as that is the legally binding document for the association."
+  },
+  "footer": {
+    "utlegg": "Expense form",
+    "contact": "connect@trondheimdc.no",
+    "orgNr": "Org. no.",
+    "address": "Postboks 1275 Torgarden, 7462 Trondheim, Norway"
+  }
+}
