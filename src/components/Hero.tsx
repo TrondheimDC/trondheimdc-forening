@@ -11,11 +11,6 @@ import { cn } from "@/lib/utils"
 type Tile = {
   src: string
   alt: string
-  // Extra classes for the image itself, for assets that don't sit well on
-  // bg-card: the TDC mark is solid white and needs the same light-theme
-  // inversion the nav logo uses, and the NNUG logo is transparent where the
-  // other group logos are opaque JPEGs.
-  imgClassName?: string
   className: string
   // Placement below `lg`, where the centred text column eats nearly the full
   // width. Tiles live in the hero's fixed py-28 padding bands (top/bottom) and
@@ -29,48 +24,44 @@ type Tile = {
 
 const tiles: Tile[] = [
   {
-    // Logo viewBox is 297x121 — a wide chip, not a square tile.
-    src: "/img/logos/TDC_white.svg",
+    src: "/img/logos/tdc.jpg",
     alt: "TrondheimDC",
-    imgClassName: "invert-0 light:invert",
-    className: "left-[5%] top-[14%] aspect-[297/121] w-36 p-3",
-    mobileClassName: "-left-4 top-5 aspect-[297/121] w-28 p-2.5",
+    className: "left-[5%] top-[14%] aspect-video w-32",
+    mobileClassName: "-left-4 top-5 aspect-video w-24",
     delay: "0s",
     rotate: "-6deg",
   },
   {
-    src: "/img/groups/nnug-trondheim.png",
+    src: "/img/groups/nnug-trondheim.jpg",
     alt: groups[2]?.name ?? "",
-    imgClassName: groups[2]?.logoNeedsWhiteBg ? "bg-white" : undefined,
-    className: "right-[6%] top-[13%] aspect-square w-16 p-2",
-    mobileClassName: "-right-4 top-6 aspect-square w-14 p-1.5",
+    className: "right-[6%] top-[13%] aspect-video w-32",
+    mobileClassName: "-right-4 top-6 aspect-video w-24",
     delay: "1.8s",
     rotate: "5deg",
   },
   {
     src: "/img/groups/javabin-trondheim.jpeg",
     alt: groups[0]?.name ?? "",
-    className: "right-[4%] bottom-[20%] aspect-video w-32 p-1.5",
-    mobileClassName: "-right-5 bottom-6 aspect-video w-24 p-1",
+    className: "right-[4%] bottom-[20%] aspect-video w-32",
+    mobileClassName: "-right-5 bottom-6 aspect-video w-24",
     delay: "0.4s",
     rotate: "-4deg",
   },
   {
     src: "/img/groups/bartjs.jpeg",
     alt: groups[1]?.name ?? "",
-    className: "left-[3%] bottom-[16%] aspect-video w-32 p-1.5",
-    mobileClassName: "-left-5 bottom-11 aspect-video w-24 p-1",
+    className: "left-[3%] bottom-[16%] aspect-video w-32",
+    mobileClassName: "-left-5 bottom-11 aspect-video w-24",
     delay: "1.1s",
     rotate: "3deg",
   },
   {
     src: "/img/groups/ixda-trondheim.jpeg",
     alt: groups[4]?.name ?? "",
-    className: "left-[14%] top-[54%] aspect-video w-28 p-1.5",
+    className: "left-[14%] top-[54%] aspect-video w-32",
     // Held back on phones (too crowded); fills the empty middle of the
     // bottom band once there is room for it.
-    mobileClassName:
-      "hidden md:block right-[20%] bottom-7 aspect-video w-20 p-1",
+    mobileClassName: "hidden md:block right-[20%] bottom-7 aspect-video w-24",
     delay: "1.5s",
     rotate: "4deg",
   },
@@ -99,7 +90,7 @@ function HeroTile({ tile, placement }: { tile: Tile; placement: string }) {
         src={tile.src}
         alt=""
         fill
-        className={cn("rounded-[inherit] object-contain", tile.imgClassName)}
+        className="rounded-[inherit] object-contain"
       />
     </div>
   )

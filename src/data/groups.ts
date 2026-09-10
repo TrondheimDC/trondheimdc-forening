@@ -3,10 +3,6 @@ export type Group = {
   name: string
   url: string
   logo: string | null
-  // Set for logos that are transparent PNGs rather than opaque photos/JPEGs
-  // (like the rest) — they need a real white plate behind them instead of
-  // whatever theme background happens to show through.
-  logoNeedsWhiteBg?: boolean
   blurb: string
 }
 
@@ -35,8 +31,7 @@ export const groups: Group[] = [
     slug: "nnug-trondheim",
     name: "NNUG Trondheim",
     url: "https://www.meetup.com/nnug-trondheim/",
-    logo: "/img/groups/nnug-trondheim.png",
-    logoNeedsWhiteBg: true,
+    logo: "/img/groups/nnug-trondheim.jpg",
     blurb:
       "Norwegian .NET User Group – uavhengig brukergruppe for utviklere og arkitekter som jobber med Microsofts .NET-teknologier.",
   },

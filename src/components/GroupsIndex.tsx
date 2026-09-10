@@ -4,7 +4,6 @@ import { ExternalLink, Users } from "lucide-react"
 import Image from "next/image"
 import { useTranslation } from "react-i18next"
 import { groups } from "@/data/groups"
-import { cn } from "@/lib/utils"
 
 export const GroupsIndex = () => {
   const { t } = useTranslation("common", { keyPrefix: "groups" })
@@ -26,12 +25,7 @@ export const GroupsIndex = () => {
               rel="noopener noreferrer"
               className="group flex flex-col rounded-xl border border-border bg-card p-5 transition-colors hover:border-border-strong hover:bg-muted"
             >
-              <div
-                className={cn(
-                  "relative mb-4 aspect-video w-20 overflow-hidden rounded-lg p-1",
-                  group.logoNeedsWhiteBg ? "bg-white" : "bg-background",
-                )}
-              >
+              <div className="relative mb-4 aspect-video w-20 overflow-hidden rounded-lg bg-background p-1">
                 {group.logo ? (
                   <Image
                     src={group.logo}
