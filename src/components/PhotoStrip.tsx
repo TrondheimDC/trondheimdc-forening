@@ -45,6 +45,11 @@ export const PhotoStrip = () => {
             key={photo.src}
             type="button"
             onClick={() => setIndex(i)}
+            // photo.alt repeats across the strip ("Fra TDC 2025" x6, "Fra TDC
+            // 2024" x6), so on its own it leaves every button with the same
+            // accessible name and no indication it opens a full-size viewer.
+            aria-label={`Forstørr bilde ${i + 1} av ${PHOTOS.length}: ${photo.alt}`}
+            lang="no"
             className={
               photo.portrait
                 ? "relative h-40 flex-shrink-0 cursor-zoom-in overflow-hidden rounded-lg aspect-[3/4] sm:h-48"
