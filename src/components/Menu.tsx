@@ -51,6 +51,8 @@ export const Menu = () => {
             onClick={() => handleLanguageChange("no")}
             className="rounded-md px-2 py-1 text-sm text-muted-foreground transition-colors hover:text-foreground data-[active=true]:text-foreground"
             data-active={i18n.language === "no"}
+            aria-pressed={i18n.language === "no"}
+            lang="no"
           >
             NO
           </button>
@@ -59,6 +61,8 @@ export const Menu = () => {
             onClick={() => handleLanguageChange("en")}
             className="rounded-md px-2 py-1 text-sm text-muted-foreground transition-colors hover:text-foreground data-[active=true]:text-foreground"
             data-active={i18n.language === "en"}
+            aria-pressed={i18n.language === "en"}
+            lang="en"
           >
             EN
           </button>
