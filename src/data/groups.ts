@@ -15,7 +15,7 @@ export const groups: Group[] = [
     slug: "javabin-trondheim",
     name: "javaBin Trondheim",
     url: "https://www.meetup.com/javabin-trondheim/",
-    logo: "/img/groups/javabin-trondheim.jpeg",
+    logo: "/img/groups/javabin-trondheim.webp",
     blurb:
       "Brukergruppe og sosialt samlingspunkt for alle som er nysgjerrige på teknologi – nybegynnere, studenter og erfarne utviklere. Gratis og åpne arrangementer.",
   },
@@ -23,7 +23,7 @@ export const groups: Group[] = [
     slug: "bartjs",
     name: "Bart.js",
     url: "https://www.meetup.com/bartjs/",
-    logo: "/img/groups/bartjs.jpeg",
+    logo: "/img/groups/bartjs.webp",
     blurb:
       "Trondheims meetup om alt av JavaScript og TypeScript – fra servere og IoT til UI-utvikling.",
   },
@@ -31,7 +31,7 @@ export const groups: Group[] = [
     slug: "nnug-trondheim",
     name: "NNUG Trondheim",
     url: "https://www.meetup.com/nnug-trondheim/",
-    logo: "/img/groups/nnug-trondheim.jpg",
+    logo: "/img/groups/nnug-trondheim.webp",
     blurb:
       "Norwegian .NET User Group – uavhengig brukergruppe for utviklere og arkitekter som jobber med Microsofts .NET-teknologier.",
   },
@@ -47,7 +47,7 @@ export const groups: Group[] = [
     slug: "ixda-trondheim",
     name: "IxDA Trondheim",
     url: "https://www.meetup.com/ixdatrondheim/",
-    logo: "/img/groups/ixda-trondheim.jpeg",
+    logo: "/img/groups/ixda-trondheim.webp",
     blurb: "Trondheims største og mest aktive miljø for interaksjonsdesign.",
   },
 ]

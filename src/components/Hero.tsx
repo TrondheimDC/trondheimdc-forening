@@ -24,7 +24,7 @@ type Tile = {
 
 const tiles: Tile[] = [
   {
-    src: "/img/logos/tdc.jpg",
+    src: "/img/logos/tdc.webp",
     alt: "TrondheimDC",
     className: "left-[5%] top-[14%] aspect-video w-32",
     mobileClassName: "-left-4 top-5 aspect-video w-24",
@@ -32,7 +32,7 @@ const tiles: Tile[] = [
     rotate: "-6deg",
   },
   {
-    src: "/img/groups/nnug-trondheim.jpg",
+    src: "/img/groups/nnug-trondheim.webp",
     alt: groups[2]?.name ?? "",
     className: "right-[6%] top-[13%] aspect-video w-32",
     mobileClassName: "-right-4 top-6 aspect-video w-24",
@@ -40,7 +40,7 @@ const tiles: Tile[] = [
     rotate: "5deg",
   },
   {
-    src: "/img/groups/javabin-trondheim.jpeg",
+    src: "/img/groups/javabin-trondheim.webp",
     alt: groups[0]?.name ?? "",
     className: "right-[4%] bottom-[20%] aspect-video w-32",
     mobileClassName: "-right-5 bottom-6 aspect-video w-24",
@@ -48,7 +48,7 @@ const tiles: Tile[] = [
     rotate: "-4deg",
   },
   {
-    src: "/img/groups/bartjs.jpeg",
+    src: "/img/groups/bartjs.webp",
     alt: groups[1]?.name ?? "",
     className: "left-[3%] bottom-[16%] aspect-video w-32",
     mobileClassName: "-left-5 bottom-11 aspect-video w-24",
@@ -56,7 +56,7 @@ const tiles: Tile[] = [
     rotate: "3deg",
   },
   {
-    src: "/img/groups/ixda-trondheim.jpeg",
+    src: "/img/groups/ixda-trondheim.webp",
     alt: groups[4]?.name ?? "",
     className: "left-[14%] top-[54%] aspect-video w-32",
     // Held back on phones (too crowded); fills the empty middle of the
@@ -107,7 +107,7 @@ export const Hero = () => {
       <div
         aria-hidden="true"
         className="absolute inset-0 bg-cover bg-center [mix-blend-mode:luminosity]"
-        style={{ backgroundImage: "url(/img/hero-background.png)" }}
+        style={{ backgroundImage: "url(/img/hero-background.webp)" }}
       />
       <div
         aria-hidden="true"
