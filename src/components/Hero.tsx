@@ -11,7 +11,6 @@ import { cn } from "@/lib/utils"
 type Tile = {
   src: string
   alt: string
-  href?: string
   className: string
   delay: string
   rotate: string
@@ -36,7 +35,6 @@ const tiles: Tile[] = [
   {
     src: "/img/groups/javabin-trondheim.jpeg",
     alt: groups[0]?.name ?? "",
-    href: groups[0]?.url,
     className: "right-[4%] bottom-[20%] aspect-video w-32 p-1.5",
     delay: "0.4s",
     rotate: "-4deg",
@@ -44,7 +42,6 @@ const tiles: Tile[] = [
   {
     src: "/img/groups/bartjs.jpeg",
     alt: groups[1]?.name ?? "",
-    href: groups[1]?.url,
     className: "left-[3%] bottom-[16%] aspect-video w-32 p-1.5",
     delay: "1.1s",
     rotate: "3deg",
@@ -52,7 +49,6 @@ const tiles: Tile[] = [
   {
     src: "/img/groups/nnug-trondheim.png",
     alt: groups[2]?.name ?? "",
-    href: groups[2]?.url,
     className: "right-[16%] top-[54%] aspect-square w-16 p-2",
     delay: "1.8s",
     rotate: "-3deg",
@@ -60,16 +56,19 @@ const tiles: Tile[] = [
   {
     src: "/img/groups/ixda-trondheim.jpeg",
     alt: groups[4]?.name ?? "",
-    href: groups[4]?.url,
     className: "left-[14%] top-[54%] aspect-video w-28 p-1.5",
     delay: "1.5s",
     rotate: "4deg",
   },
 ]
 
+// Purely decorative — these are floating duplicates of logos shown (as real
+// links) in the Groups section below, so they carry no link and are hidden
+// from assistive tech rather than announced as unlabeled images.
 function HeroTile({ tile }: { tile: Tile }) {
-  const content = (
+  return (
     <div
+      aria-hidden="true"
       className={cn(
         "animate-float absolute rounded-2xl border border-border bg-card shadow-lg",
         tile.className,
@@ -83,27 +82,12 @@ function HeroTile({ tile }: { tile: Tile }) {
     >
       <Image
         src={tile.src}
-        alt={tile.alt}
+        alt=""
         fill
         className="rounded-[inherit] object-contain"
       />
     </div>
   )
-
-  if (tile.href) {
-    return (
-      <a
-        href={tile.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={tile.alt}
-      >
-        {content}
-      </a>
-    )
-  }
-
-  return content
 }
 
 export const Hero = () => {
@@ -127,9 +111,7 @@ export const Hero = () => {
 
       <div className="pointer-events-none absolute inset-0 hidden lg:block">
         {tiles.map((tile) => (
-          <div key={tile.alt + tile.className} className="pointer-events-auto">
-            <HeroTile tile={tile} />
-          </div>
+          <HeroTile key={tile.alt + tile.className} tile={tile} />
         ))}
       </div>
 
