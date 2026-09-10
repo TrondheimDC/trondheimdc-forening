@@ -2,7 +2,7 @@
   "notFound": "Not found",
   "menu": {
     "home": "Home",
-    "groups": "Special interest groups",
+    "groups": "Communities",
     "archive": "Archive",
     "stotte": "Support",
     "vedtekter": "Bylaws",
@@ -15,7 +15,7 @@
     "kicker": "The association behind TDC",
     "title": "TrondheimDC",
     "subtitle": "We run the TDC conference, and use the surplus to support the volunteer tech community in Trondheim the rest of the year.",
-    "ctaGroups": "See the special interest groups",
+    "ctaGroups": "See the communities",
     "ctaStotte": "Apply for support"
   },
   "about": {
@@ -25,11 +25,11 @@
     "p3": "We have run the conference since 2012."
   },
   "groups": {
-    "title": "Special interest groups in Trondheim",
-    "subtitle": "An independent index of special interest groups in the Trondheim region — not just the ones we fund.",
-    "visit": "Visit the group",
+    "title": "Communities in Trondheim",
+    "subtitle": "An independent index of tech communities in the Trondheim region — not just the ones we fund.",
+    "visit": "Visit the community",
     "addYours": {
-      "title": "Is your group missing?",
+      "title": "Is your community missing?",
       "body": "Email us and we'll add you to the list.",
       "cta": "connect@trondheimdc.no"
     }
@@ -43,7 +43,7 @@
     "screenshotAlt": "Screenshot of the TDC {{year}} website"
   },
   "stotte": {
-    "title": "Support for special interest groups",
+    "title": "Support for communities",
     "intro": "The association exists to support the local, volunteer-run IT community in the Trondheim region. Below are the criteria for what we can contribute to.",
     "criteriaTitle": "Who can apply?",
     "criteria": [
