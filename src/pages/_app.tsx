@@ -17,6 +17,25 @@ const AppShell = ({ Component, pageProps }: AppProps) => {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* The two faces that render above the fold everywhere: body copy and
+            headings. Without these the browser only discovers the fonts after
+            it has parsed the stylesheet, which is what makes the swap from the
+            fallback visible. The remaining weights and the latin-ext subsets
+            stay lazy — they are rarely, if ever, needed on first paint. */}
+        <link
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          href="/fonts/ibm-plex-sans-latin-400-normal.woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          href="/fonts/space-grotesk-latin-700-normal.woff2"
+          crossOrigin="anonymous"
+        />
         <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
         <link
           rel="icon"

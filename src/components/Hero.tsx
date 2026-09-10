@@ -2,7 +2,6 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import type * as React from "react"
 import { useTranslation } from "react-i18next"
 import { Button } from "@/components/ui/button"
 import { groups } from "@/data/groups"
@@ -18,6 +17,7 @@ type Tile = {
   // Offsets are fixed rather than percentage-based so they stay inside those
   // bands no matter how far the copy wraps. Omitted = desktop-only.
   mobileClassName?: string
+  // Negative: an offset into the float cycle, so the stagger costs no wait.
   delay: string
   rotate: string
 }
@@ -36,7 +36,7 @@ const tiles: Tile[] = [
     alt: groups[2]?.name ?? "",
     className: "right-[6%] top-[13%] aspect-video w-32",
     mobileClassName: "-right-4 top-6 aspect-video w-24",
-    delay: "1.8s",
+    delay: "-1.8s",
     rotate: "5deg",
   },
   {
@@ -44,7 +44,7 @@ const tiles: Tile[] = [
     alt: groups[0]?.name ?? "",
     className: "right-[4%] bottom-[20%] aspect-video w-32",
     mobileClassName: "-right-5 bottom-6 aspect-video w-24",
-    delay: "0.4s",
+    delay: "-0.4s",
     rotate: "-4deg",
   },
   {
@@ -52,7 +52,7 @@ const tiles: Tile[] = [
     alt: groups[1]?.name ?? "",
     className: "left-[3%] bottom-[16%] aspect-video w-32",
     mobileClassName: "-left-5 bottom-11 aspect-video w-24",
-    delay: "1.1s",
+    delay: "-1.1s",
     rotate: "3deg",
   },
   {
@@ -62,7 +62,7 @@ const tiles: Tile[] = [
     // Held back on phones (too crowded); fills the empty middle of the
     // bottom band once there is room for it.
     mobileClassName: "hidden md:block right-[20%] bottom-7 aspect-video w-24",
-    delay: "1.5s",
+    delay: "-1.5s",
     rotate: "4deg",
   },
 ]
@@ -79,17 +79,20 @@ function HeroTile({ tile, placement }: { tile: Tile; placement: string }) {
         "animate-float absolute rounded-2xl border border-border bg-card shadow-lg",
         placement,
       )}
-      style={
-        {
-          animationDelay: tile.delay,
-          "--tile-rotate": tile.rotate,
-        } as React.CSSProperties
-      }
+      // The tilt is a plain style so it is present on the very first paint;
+      // only the vertical drift is animated. The delay is negative so each
+      // tile starts mid-cycle instead of sitting still until its turn comes.
+      style={{ animationDelay: tile.delay, rotate: tile.rotate }}
     >
+      {/* Eager, not next/image's default lazy: these sit above the fold, so
+          deferring them just means the tiles paint empty and fill in later.
+          Not `priority` — both scatters render the same five sources, and a
+          preload link per copy would be nine hints for five files. */}
       <Image
         src={tile.src}
         alt=""
         fill
+        loading="eager"
         className="rounded-[inherit] object-contain"
       />
     </div>
