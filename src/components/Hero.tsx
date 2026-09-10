@@ -76,7 +76,7 @@ function HeroTile({ tile, placement }: { tile: Tile; placement: string }) {
     <div
       aria-hidden="true"
       className={cn(
-        "animate-float absolute rounded-2xl border border-border bg-card shadow-lg",
+        "animate-float absolute overflow-hidden rounded-2xl border border-border bg-card shadow-lg",
         placement,
       )}
       // The tilt is a plain style so it is present on the very first paint;
@@ -93,7 +93,9 @@ function HeroTile({ tile, placement }: { tile: Tile; placement: string }) {
         alt=""
         fill
         loading="eager"
-        className="rounded-[inherit] object-contain"
+        // cover, not contain: box-sizing means the 1px border leaves a 126x70
+        // inner box, so a 16:9 image letterboxes and leaks bg-card down the sides.
+        className="object-cover"
       />
     </div>
   )
