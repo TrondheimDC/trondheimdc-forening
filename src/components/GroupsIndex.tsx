@@ -40,7 +40,10 @@ export const GroupsIndex = () => {
                 )}
               </div>
               <h3 className="text-lg font-semibold">{group.name}</h3>
-              <p className="mt-2 flex-1 text-sm text-muted-foreground">
+              <p
+                lang="no"
+                className="mt-2 flex-1 text-sm text-muted-foreground"
+              >
                 {group.blurb}
               </p>
               <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary">

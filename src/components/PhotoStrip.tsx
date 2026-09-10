@@ -54,6 +54,7 @@ export const PhotoStrip = () => {
             <Image
               src={photo.src}
               alt={photo.alt}
+              lang="no"
               fill
               className="object-cover"
             />

@@ -23,12 +23,14 @@ const Vedtekter = () => {
         <title>{`TrondheimDC | ${t("title")}`}</title>
       </Head>
       <div className="mx-auto max-w-2xl px-4 py-20 sm:px-6">
-        <h1 className="text-4xl">Vedtekter for TrondheimDC</h1>
+        <h1 lang="no" className="text-4xl">
+          Vedtekter for TrondheimDC
+        </h1>
         <p className="mt-4 rounded-lg border border-border bg-card p-4 text-sm text-muted-foreground">
           {t("note")}
         </p>
 
-        <nav aria-label="Innholdsfortegnelse" className="mt-8">
+        <nav lang="no" aria-label="Innholdsfortegnelse" className="mt-8">
           <ol className="grid grid-cols-1 gap-x-6 gap-y-1 text-sm sm:grid-cols-2">
             {SECTIONS.map((section) => (
               <li key={section.id}>
@@ -43,7 +45,10 @@ const Vedtekter = () => {
           </ol>
         </nav>
 
-        <div className="prose-vedtekter mt-12 space-y-12 text-muted-foreground">
+        <div
+          lang="no"
+          className="prose-vedtekter mt-12 space-y-12 text-muted-foreground"
+        >
           <section id="1" className="scroll-mt-20">
             <h2 className="text-foreground">§1 Navn</h2>
             <p>
