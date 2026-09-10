@@ -21,7 +21,11 @@ const AppShell = ({ Component, pageProps }: AppProps) => {
             headings. Without these the browser only discovers the fonts after
             it has parsed the stylesheet, which is what makes the swap from the
             fallback visible. The remaining weights and the latin-ext subsets
-            stay lazy — they are rarely, if ever, needed on first paint. */}
+            stay lazy — they are rarely, if ever, needed on first paint.
+            Headings are 400, not 700: Tailwind's preflight resets h1-h6 to
+            `font-weight: inherit`, so they inherit the body's weight and only
+            the display family changes. Preloading Space Grotesk 700 here
+            fetches a file no heading on the page asks for. */}
         <link
           rel="preload"
           as="font"
@@ -33,7 +37,7 @@ const AppShell = ({ Component, pageProps }: AppProps) => {
           rel="preload"
           as="font"
           type="font/woff2"
-          href="/fonts/space-grotesk-latin-700-normal.woff2"
+          href="/fonts/space-grotesk-latin-400-normal.woff2"
           crossOrigin="anonymous"
         />
         <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
