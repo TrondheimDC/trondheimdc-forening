@@ -1,8 +1,33 @@
 @import "tailwindcss";
 @plugin "tailwindcss-animate";
 
-@custom-variant dark (&:is([data-theme="dark"] *));
-@custom-variant light (&:is([data-theme="light"] *));
+/* `data-theme` is only on <html> once next-themes' script has run. The token
+   blocks further down already cover the gap. Before that the theme comes
+   from `prefers-color-scheme`, so these variants have to cover it too, or a
+   `light:`/`dark:` utility silently does nothing on the first paint and for
+   anyone without JS. That gap is why the white TDC wordmark used to paint
+   white-on-white in the header until hydration. The second arm of each
+   variant mirrors the selector the `@media` token block uses verbatim. */
+@custom-variant dark {
+  &:is([data-theme="dark"] *) {
+    @slot;
+  }
+  @media not all and (prefers-color-scheme: light) {
+    &:is(:root:not([data-theme="dark"]):not([data-theme="light"]) *) {
+      @slot;
+    }
+  }
+}
+@custom-variant light {
+  &:is([data-theme="light"] *) {
+    @slot;
+  }
+  @media (prefers-color-scheme: light) {
+    &:is(:root:not([data-theme="dark"]):not([data-theme="light"]) *) {
+      @slot;
+    }
+  }
+}
 
 /* =====================================================================
    Fonts — self-hosted, ported from trondheimdc.no's design system.
