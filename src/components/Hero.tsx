@@ -11,7 +11,7 @@ type Tile = {
   src: string
   alt: string
   className: string
-  // Placement below `lg`, where the centred text column eats nearly the full
+  // Placement below `xl`, where the centred text column eats nearly the full
   // width. Tiles live in the hero's fixed py-28 padding bands (top/bottom) and
   // bleed off the left/right edges, which the section's overflow-hidden clips.
   // Offsets are fixed rather than percentage-based so they stay inside those
@@ -70,7 +70,7 @@ const tiles: Tile[] = [
 // Purely decorative — the TDC mark plus group logos that also appear (as real
 // links) in the Groups section below, so these carry no link and are hidden
 // from assistive tech rather than announced as unlabeled images. `placement`
-// is the only thing that differs between the desktop and below-lg scatters.
+// is the only thing that differs between the desktop and below-xl scatters.
 function HeroTile({ tile, placement }: { tile: Tile; placement: string }) {
   return (
     <div
@@ -106,6 +106,11 @@ export const Hero = () => {
 
   return (
     <section className="relative overflow-hidden">
+      {/* Luminosity over a white backdrop turns the photo into plain
+          greyscale, so the veil that reads as a soft haze on black leaves
+          dark photo detail sitting under dark body copy instead. Light mode
+          keeps the photo at full strength and instead leans on the copy scrim
+          below, which is the layer that actually has to carry contrast. */}
       <div
         aria-hidden="true"
         className="absolute inset-0 bg-cover bg-center [mix-blend-mode:luminosity]"
@@ -117,10 +122,30 @@ export const Hero = () => {
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/20 to-background"
+        className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/20 to-background light:via-background/30"
+      />
+      {/* Copy scrim: an ellipse that settles the backdrop under the copy
+          alone, so the photo keeps its detail out at the edges where the
+          tiles float. Partial rather than solid, so the photo still shows
+          through behind the text.
+
+          Its box has to be wider than the copy it covers, because the radii
+          stop at 50%: the ellipse then reaches transparent exactly at the box
+          edge, so the box's straight sides never show up as seams, but the
+          falloff has to start outside the text rather than through it. The
+          copy column is min(100vw, 768px), and 150% capped at 1024px stays
+          clear of it at every width. A percentage of the section, the obvious
+          thing to reach for, does not: the column is full-bleed on a phone
+          and a fixed 768px on a wide desktop.
+
+          Above the photo but below the tiles, hence its own layer rather than
+          a background on the copy column itself. */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-y-0 left-1/2 w-[150%] max-w-5xl -translate-x-1/2 bg-[radial-gradient(ellipse_50%_50%_at_50%_50%,var(--hero-scrim)_0%,var(--hero-scrim)_25%,transparent_100%)]"
       />
 
-      <div className="pointer-events-none absolute inset-0 hidden lg:block">
+      <div className="pointer-events-none absolute inset-0 hidden xl:block">
         {tiles.map((tile) => (
           <HeroTile
             key={tile.alt + tile.className}
@@ -130,7 +155,7 @@ export const Hero = () => {
         ))}
       </div>
 
-      <div className="pointer-events-none absolute inset-0 lg:hidden">
+      <div className="pointer-events-none absolute inset-0 xl:hidden">
         {tiles
           .filter((tile) => tile.mobileClassName)
           .map((tile) => (
@@ -143,13 +168,11 @@ export const Hero = () => {
       </div>
 
       <div className="relative mx-auto flex max-w-3xl flex-col items-center gap-6 px-4 py-28 text-center sm:px-6 sm:py-36">
-        <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
+        <p className="text-sm font-medium uppercase tracking-wider text-foreground">
           {t("kicker")}
         </p>
         <h1 className="text-4xl sm:text-5xl">{t("title")}</h1>
-        <p className="text-balance text-lg text-muted-foreground">
-          {t("subtitle")}
-        </p>
+        <p className="text-balance text-lg text-foreground">{t("subtitle")}</p>
         <div className="mt-2 flex flex-wrap items-center justify-center gap-3">
           <Button asChild size="lg">
             <Link href="#meetups">{t("ctaGroups")}</Link>

@@ -186,6 +186,10 @@
   --border-strong: color-mix(in srgb, var(--fg-base) 32%, transparent);
   --danger: var(--color-red-3);
   --overlay: color-mix(in srgb, var(--color-black) 72%, transparent);
+  /* Strength of the hero's copy scrim. Light mode needs more of it: the
+     photo goes greyscale under the luminosity blend there, so its midtones
+     land much closer to the text colour than they do on black. */
+  --hero-scrim: color-mix(in srgb, var(--bg-base) 50%, transparent);
 
   --font-family-sans: "IBM Plex Sans", "IBM Plex Sans Fallback", system-ui,
     -apple-system, "Segoe UI", sans-serif;
@@ -200,7 +204,11 @@
   --bg-base: var(--color-white-1);
   --bg-surface: var(--color-white-2);
   --fg-base: var(--color-black-3);
-  --fg-muted: color-mix(in srgb, var(--fg-base) 64%, var(--bg-base));
+  /* 70%, not dark mode's 64%: light mode's base is the darker of the two, so
+     the same mix lands at #767676, whose contrast against the page background
+     tops out at 4.28:1, under AA for body text no matter what is behind it.
+     70% lands at #696969 and clears 4.5:1 with a little room to spare. */
+  --fg-muted: color-mix(in srgb, var(--fg-base) 70%, var(--bg-base));
   --fg-brand: var(--color-red-3);
   --fg-brand-2: var(--color-purple-3);
   --fg-brand-3: var(--color-yellow-3);
@@ -209,6 +217,7 @@
   --border-strong: color-mix(in srgb, var(--fg-base) 28%, transparent);
   --danger: var(--color-red-4);
   --overlay: color-mix(in srgb, var(--color-black) 55%, transparent);
+  --hero-scrim: color-mix(in srgb, var(--bg-base) 58%, transparent);
 }
 
 @media (prefers-color-scheme: light) {
@@ -217,7 +226,7 @@
     --bg-base: var(--color-white-1);
     --bg-surface: var(--color-white-2);
     --fg-base: var(--color-black-3);
-    --fg-muted: color-mix(in srgb, var(--fg-base) 64%, var(--bg-base));
+    --fg-muted: color-mix(in srgb, var(--fg-base) 70%, var(--bg-base));
     --fg-brand: var(--color-red-3);
     --fg-brand-2: var(--color-purple-3);
     --fg-brand-3: var(--color-yellow-3);
@@ -226,6 +235,7 @@
     --border-strong: color-mix(in srgb, var(--fg-base) 28%, transparent);
     --danger: var(--color-red-4);
     --overlay: color-mix(in srgb, var(--color-black) 55%, transparent);
+    --hero-scrim: color-mix(in srgb, var(--bg-base) 58%, transparent);
   }
 }
 
