@@ -22,6 +22,12 @@ const IMAGES = [
   { src: "public/img/groups/ixda-trondheim.jpeg", width: 320 },
   { src: "public/img/groups/javabin-trondheim.jpeg", width: 320 },
   { src: "public/img/groups/nnug-trondheim.jpg", width: 320 },
+  // The only square source in the set. The grid and the hero tiles both put
+  // these in a 16:9 box, so it gets cropped to match rather than rendered as
+  // a letterboxed square among six landscape logos. Ferris sits just below
+  // the middle of the frame, which a centred crop keeps.
+  { src: "public/img/groups/rust-trondheim.jpeg", width: 320, height: 180 },
+  { src: "public/img/groups/spillmakerlauget-midt.jpeg", width: 320 },
 
   // Archive screenshots. The grid tops out at four columns inside a
   // `max-w-6xl`, so a card is ~270px wide; these are 1280px-wide captures.
@@ -61,14 +67,18 @@ const IMAGES = [
 const kb = (bytes) => `${Math.round(bytes / 1024)}K`
 
 // `withoutEnlargement` so a source narrower than the target is only
-// re-encoded, never upscaled.
-const write = (src, dest, width, quality) =>
-  sharp(src).resize({ width, withoutEnlargement: true }).webp({ quality }).toFile(dest)
+// re-encoded, never upscaled. A `height` opts into a centred crop to that
+// exact box; without one the source's own aspect ratio is kept.
+const write = (src, dest, width, quality, height) =>
+  sharp(src)
+    .resize({ width, height, withoutEnlargement: !height, fit: height ? "cover" : "inside" })
+    .webp({ quality })
+    .toFile(dest)
 
-for (const { src, width, quality = 80, thumb } of IMAGES) {
+for (const { src, width, height, quality = 80, thumb } of IMAGES) {
   const dest = src.replace(/\.[^.]+$/, ".webp")
   const before = statSync(src).size
-  const { size: after } = await write(src, dest, width, quality)
+  const { size: after } = await write(src, dest, width, quality, height)
   console.log(`ok   ${src} ${kb(before)} -> ${dest} ${kb(after)}`)
 
   if (thumb) {

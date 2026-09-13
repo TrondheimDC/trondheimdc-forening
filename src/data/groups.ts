@@ -21,7 +21,7 @@ export const groups: Group[] = [
   },
   {
     slug: "bartjs",
-    name: "Bart.js",
+    name: "BartJS",
     url: "https://www.meetup.com/bartjs/",
     logo: "/img/groups/bartjs.webp",
     blurb:
@@ -50,4 +50,26 @@ export const groups: Group[] = [
     logo: "/img/groups/ixda-trondheim.webp",
     blurb: "Trondheims største og mest aktive miljø for interaksjonsdesign.",
   },
+  {
+    slug: "rust-trondheim",
+    name: "Rust Trondheim",
+    url: "https://www.meetup.com/rust-trondheim/",
+    logo: "/img/groups/rust-trondheim.webp",
+    blurb:
+      "For alle som er nysgjerrige på programmeringsspråket Rust. Månedlige samlinger der de koder og prater Rust. Nybegynnere er like velkomne som alle andre.",
+  },
+  {
+    slug: "spillmakerlauget-midt",
+    name: "Spillmakerlauget Midt",
+    url: "https://www.meetup.com/sml-midt/",
+    logo: "/img/groups/spillmakerlauget-midt.webp",
+    blurb:
+      "Midt-Norge-avdelingen av Spillmakerlauget, en gruppe for spillutviklere drevet av spillutviklere.",
+  },
 ]
+
+// Looked up by slug rather than by index: the hero picks a handful of these
+// logos out for its floating tiles, and doing that positionally meant adding
+// or reordering a group here silently swapped which logos the hero showed.
+export const groupBySlug = (slug: string): Group | undefined =>
+  groups.find((group) => group.slug === slug)

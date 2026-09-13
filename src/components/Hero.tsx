@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useTranslation } from "react-i18next"
 import { Button } from "@/components/ui/button"
-import { groups } from "@/data/groups"
+import { groupBySlug } from "@/data/groups"
 import { cn } from "@/lib/utils"
 
 type Tile = {
@@ -33,7 +33,7 @@ const tiles: Tile[] = [
   },
   {
     src: "/img/groups/nnug-trondheim.webp",
-    alt: groups[2]?.name ?? "",
+    alt: groupBySlug("nnug-trondheim")?.name ?? "",
     className: "right-[6%] top-[13%] aspect-video w-32",
     mobileClassName: "-right-4 top-6 aspect-video w-24",
     delay: "-1.8s",
@@ -41,7 +41,7 @@ const tiles: Tile[] = [
   },
   {
     src: "/img/groups/javabin-trondheim.webp",
-    alt: groups[0]?.name ?? "",
+    alt: groupBySlug("javabin-trondheim")?.name ?? "",
     className: "right-[4%] bottom-[20%] aspect-video w-32",
     mobileClassName: "-right-5 bottom-6 aspect-video w-24",
     delay: "-0.4s",
@@ -49,7 +49,7 @@ const tiles: Tile[] = [
   },
   {
     src: "/img/groups/bartjs.webp",
-    alt: groups[1]?.name ?? "",
+    alt: groupBySlug("bartjs")?.name ?? "",
     className: "left-[3%] bottom-[16%] aspect-video w-32",
     mobileClassName: "-left-5 bottom-11 aspect-video w-24",
     delay: "-1.1s",
@@ -57,7 +57,7 @@ const tiles: Tile[] = [
   },
   {
     src: "/img/groups/ixda-trondheim.webp",
-    alt: groups[4]?.name ?? "",
+    alt: groupBySlug("ixda-trondheim")?.name ?? "",
     className: "left-[14%] top-[54%] aspect-video w-32",
     // Held back on phones (too crowded); fills the empty middle of the
     // bottom band once there is room for it.
