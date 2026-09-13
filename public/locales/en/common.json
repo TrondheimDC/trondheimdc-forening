@@ -6,6 +6,7 @@
     "home": "Home",
     "groups": "Communities",
     "archive": "Archive",
+    "communityStand": "Community stand",
     "stotte": "Support",
     "vedtekter": "Bylaws",
     "themeLabel": "Theme",
@@ -35,6 +36,29 @@
       "body": "Email us and we'll add you to the list.",
       "cta": "partner@trondheimdc.no"
     }
+  },
+  "communityStand": {
+    "title": "Community stand",
+    "date": "19 October 2026",
+    "intro": "TDC is a conference by and for the tech community in Trondheim. But keeping that community alive takes more than one day a year. The things that happen in between are run by the city's user groups.",
+    "offer": "So the committee sets aside a larger shared stand at the conference on {{date}} for the user groups to share. The point is to put the groups in front of the attendees, and to show the range of the city's tech scene.",
+    "getTitle": "What you get",
+    "get": [
+      "A spot on the shared stand, alongside the other user groups.",
+      "One full stand ticket, with access to the talks, lunch, and the after party.",
+      "A free hand with the stand itself. Banners, competitions, a bowl of sweets: that is up to you."
+    ],
+    "expectTitle": "What we ask",
+    "expect": [
+      "That the stand is staffed during the breaks.",
+      "That you tell us who among you gets the stand ticket, and an email address where we can reach them."
+    ],
+    "signupTitle": "How to sign up",
+    "signup": "Send us an email with the name of whoever should have the stand ticket and an email address where we can reach them, and we will take it from there.",
+    "email": "partner@trondheimdc.no",
+    "groupsTitle": "Not on the list?",
+    "groupsBody": "The offer is for user groups in the Trondheim region. See who is already listed.",
+    "groupsCta": "See the communities"
   },
   "archive": {
     "title": "Past conferences",

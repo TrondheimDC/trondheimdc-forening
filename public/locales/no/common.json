@@ -6,6 +6,7 @@
     "home": "Hjem",
     "groups": "Faggrupper",
     "archive": "Arkiv",
+    "communityStand": "Community stand",
     "stotte": "Støtte",
     "vedtekter": "Vedtekter",
     "themeLabel": "Tema",
@@ -35,6 +36,29 @@
       "body": "Send oss en e-post, så legger vi dere til på listen.",
       "cta": "partner@trondheimdc.no"
     }
+  },
+  "communityStand": {
+    "title": "Community stand",
+    "date": "19. oktober 2026",
+    "intro": "TDC er en konferanse av og for IT-miljøet i Trondheim. Men skal miljøet være levende, må det skje ting mellom de årlige konferansene også, og det er brukergruppene i byen som står for det.",
+    "offer": "Derfor setter komitéen av en større fellesstand på konferansen {{date}}, som brukergruppene deler på. Formålet er å promotere gruppene overfor konferansedeltakerne, og å vise fram mangfoldet i IT-miljøet i byen.",
+    "getTitle": "Dette får dere",
+    "get": [
+      "Plass på fellesstanden, sammen med de andre brukergruppene.",
+      "Én fullverdig standbillett med tilgang til foredragene, lunsjen og etterfesten.",
+      "Fritt spillerom på standen. Bannere, konkurranser, Twist: det er opp til dere."
+    ],
+    "expectTitle": "Dette forventer vi",
+    "expect": [
+      "At standen er bemannet i pausene.",
+      "At dere gir oss navnet på den av dere som skal ha standbilletten, og en e-postadresse vi kan nå vedkommende på."
+    ],
+    "signupTitle": "Slik melder dere dere på",
+    "signup": "Send oss en e-post med navnet på den som skal ha standbilletten og en e-postadresse vi kan nå vedkommende på, så tar vi det derfra.",
+    "email": "partner@trondheimdc.no",
+    "groupsTitle": "Er dere ikke på listen?",
+    "groupsBody": "Tilbudet gjelder brukergruppene i Trondheimsregionen. Se hvem som allerede står oppført.",
+    "groupsCta": "Se faggruppene"
   },
   "archive": {
     "title": "Tidligere konferanser",
