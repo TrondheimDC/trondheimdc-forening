@@ -67,7 +67,7 @@ const tiles: Tile[] = [
   },
 ]
 
-// Purely decorative — the TDC mark plus group logos that also appear (as real
+// Purely decorative: the TDC mark plus group logos that also appear (as real
 // links) in the Groups section below, so these carry no link and are hidden
 // from assistive tech rather than announced as unlabeled images. `placement`
 // is the only thing that differs between the desktop and below-xl scatters.
@@ -86,7 +86,7 @@ function HeroTile({ tile, placement }: { tile: Tile; placement: string }) {
     >
       {/* Eager, not next/image's default lazy: these sit above the fold, so
           deferring them just means the tiles paint empty and fill in later.
-          Not `priority` — both scatters render the same five sources, and a
+          Not `priority`: both scatters render the same five sources, and a
           preload link per copy would be nine hints for five files. */}
       <Image
         src={tile.src}

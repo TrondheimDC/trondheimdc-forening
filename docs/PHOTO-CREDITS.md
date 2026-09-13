@@ -21,7 +21,7 @@ Photos in `public/img/photos/` are sourced from TDC's own photo archives
 | tdc2025-lykt-7071.jpg | Flickr, trondheimdc TDC2025 album | © TDC - Tech from Trondheim, LYKT Foto og Film |
 | tdc2025-lykt-7075.jpg | Flickr, trondheimdc TDC2025 album | © TDC - Tech from Trondheim, LYKT Foto og Film |
 | tdc2025-lykt-7159.jpg | Flickr, trondheimdc TDC2025 album | © TDC - Tech from Trondheim, LYKT Foto og Film |
-| tdc-duck-clarion.jpg | [LinkedIn post](https://www.linkedin.com/posts/trondheimdc_tdconf25-tdconf25-tdconf25-activity-7385968403825635329-ZUnQ) | TODO — photographer unconfirmed, possibly a committee member. The giant inflatable TDC duck outside Clarion Hotel Trondheim. |
+| tdc-duck-clarion.jpg | [LinkedIn post](https://www.linkedin.com/posts/trondheimdc_tdconf25-tdconf25-tdconf25-activity-7385968403825635329-ZUnQ) | TODO: photographer unconfirmed, possibly a committee member. The giant inflatable TDC duck outside Clarion Hotel Trondheim. |
 
-We don't link out to the source (Flickr/LinkedIn) from the site itself —
+We don't link out to the source (Flickr/LinkedIn) from the site itself,
 just the credit line above each photo in the modal.

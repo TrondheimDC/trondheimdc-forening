@@ -29,7 +29,7 @@
   },
   "groups": {
     "title": "Faggrupper i Trondheim",
-    "subtitle": "En uavhengig indeks over faggrupper i Trondheimsregionen — ikke bare de vi støtter økonomisk.",
+    "subtitle": "En uavhengig indeks over faggrupper i Trondheimsregionen, ikke bare de vi støtter økonomisk.",
     "visit": "Besøk faggruppen",
     "addYours": {
       "title": "Mangler gruppen din?",
@@ -85,7 +85,7 @@
       "Abonnement på meetup.com"
     ],
     "closingTitle": "Slik søker du",
-    "closing": "Ta kontakt på e-post, så finner vi ut av det sammen. Fortell kort om arrangementet — tema, målgruppe og hva dere ønsker at vi skal dekke.",
+    "closing": "Ta kontakt på e-post, så finner vi ut av det sammen. Fortell kort om arrangementet: tema, målgruppe og hva dere ønsker at vi skal dekke.",
     "email": "partner@trondheimdc.no",
     "reimburseTitle": "Har du allerede lagt ut for noe?",
     "reimburseBody": "Bruk utleggsskjemaet vårt for å få pengene tilbake.",

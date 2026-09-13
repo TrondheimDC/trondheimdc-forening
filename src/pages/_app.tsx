@@ -21,7 +21,7 @@ const AppShell = ({ Component, pageProps }: AppProps) => {
             headings. Without these the browser only discovers the fonts after
             it has parsed the stylesheet, which is what makes the swap from the
             fallback visible. The remaining weights and the latin-ext subsets
-            stay lazy — they are rarely, if ever, needed on first paint.
+            stay lazy. They are rarely, if ever, needed on first paint.
             Headings are 400, not 700: Tailwind's preflight resets h1-h6 to
             `font-weight: inherit`, so they inherit the body's weight and only
             the display family changes. Preloading Space Grotesk 700 here
@@ -55,7 +55,7 @@ const AppShell = ({ Component, pageProps }: AppProps) => {
         />
         <link rel="apple-touch-icon" href="/img/apple-touch-icon-180x180.png" />
       </Head>
-      {/* First focusable element on every page — invisible until a keyboard
+      {/* First focusable element on every page, invisible until a keyboard
           user tabs to it, then lets them jump past the header nav straight
           to the page content instead of tabbing through it every time. */}
       <a

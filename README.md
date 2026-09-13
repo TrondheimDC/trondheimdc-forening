@@ -1,4 +1,4 @@
-# TrondheimDC — foreningen
+# Foreningen TrondheimDC
 
 Nettside for foreningen TrondheimDC (org.nr 936657788), som arrangerer
 TDC-konferansen og støtter det lokale, frivillige IT-fagmiljøet i
@@ -43,7 +43,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 - Meetup groups: `src/data/groups.ts`
 - Conference archive: `src/data/archive.ts`
-- Vedtekter: `src/pages/vedtekter.tsx` (Norwegian only — legally binding text)
+- Vedtekter: `src/pages/vedtekter.tsx` (Norwegian only, legally binding text)
 - Support criteria: `src/pages/stotte.tsx`
 
 See [TODO.md](./TODO.md) for outstanding content decisions before launch.

@@ -5,7 +5,7 @@ import sharp from "sharp"
 // public/ ships byte-for-byte. These sources are photo-sized while the site
 // renders most of them at a couple of hundred pixels, so we keep a hand-made
 // web copy next to each original: same path, same basename, .webp extension.
-// The originals stay in the repo untouched — nothing references them, but they
+// The originals stay in the repo untouched. Nothing references them, but they
 // are what to re-run this against if a size or crop ever needs to change.
 //
 // Widths are ~2x the largest CSS size the asset is displayed at, for retina.
@@ -35,7 +35,7 @@ const IMAGES = [
     2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2023, 2024, 2025, 2026,
   ].map((year) => ({ src: `public/img/archive/${year}.jpg`, width: 640 })),
   { src: "public/img/archive/2026-dark.jpg", width: 640 },
-  // Not a screenshot but a static graphic — see the note in data/archive.ts.
+  // Not a screenshot but a static graphic; see the note in data/archive.ts.
   { src: "public/img/archive/2021.png", width: 640 },
 
   // Strip photos. These are the one place two sizes are worth it: the strip

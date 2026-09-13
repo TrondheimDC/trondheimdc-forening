@@ -29,7 +29,7 @@
   },
   "groups": {
     "title": "Communities in Trondheim",
-    "subtitle": "An independent index of tech communities in the Trondheim region — not just the ones we fund.",
+    "subtitle": "An independent index of tech communities in the Trondheim region, not just the ones we fund.",
     "visit": "Visit the community",
     "addYours": {
       "title": "Is your community missing?",
@@ -85,7 +85,7 @@
       "Meetup.com subscription"
     ],
     "closingTitle": "How to apply",
-    "closing": "Get in touch by email and we'll figure it out together. Briefly describe the event — theme, audience, and what you'd like us to cover.",
+    "closing": "Get in touch by email and we'll figure it out together. Briefly describe the event: theme, audience, and what you'd like us to cover.",
     "email": "partner@trondheimdc.no",
     "reimburseTitle": "Already paid for something?",
     "reimburseBody": "Use our expense form to get reimbursed.",

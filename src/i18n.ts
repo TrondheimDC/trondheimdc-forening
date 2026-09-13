@@ -22,7 +22,7 @@ if (!i18n.isInitialized) {
   // This is a static export: every page is prerendered once as Norwegian,
   // and there's no server-side locale routing to set <html lang> per
   // request. Language switching happens entirely client-side after
-  // hydration, via i18n.changeLanguage() — so <html lang> has to be kept
+  // hydration, via i18n.changeLanguage(), so <html lang> has to be kept
   // in sync by hand, here, rather than by any i18next/Next.js feature.
   if (typeof document !== "undefined") {
     i18n.on("languageChanged", (lng) => {
