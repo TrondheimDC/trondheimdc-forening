@@ -33,7 +33,7 @@
     "addYours": {
       "title": "Is your community missing?",
       "body": "Email us and we'll add you to the list.",
-      "cta": "connect@trondheimdc.no"
+      "cta": "partner@trondheimdc.no"
     }
   },
   "archive": {
@@ -62,7 +62,7 @@
     ],
     "closingTitle": "How to apply",
     "closing": "Get in touch by email and we'll figure it out together. Briefly describe the event — theme, audience, and what you'd like us to cover.",
-    "email": "connect@trondheimdc.no",
+    "email": "partner@trondheimdc.no",
     "reimburseTitle": "Already paid for something?",
     "reimburseBody": "Use our expense form to get reimbursed.",
     "reimburseCta": "utlegg.trondheimdc.no"
@@ -73,7 +73,7 @@
   },
   "footer": {
     "utlegg": "Expense form",
-    "contact": "connect@trondheimdc.no",
+    "contact": "partner@trondheimdc.no",
     "orgNr": "Org. no.",
     "address": "Postboks 1275 Torgarden, 7462 Trondheim, Norway"
   }

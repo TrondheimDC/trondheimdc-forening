@@ -33,7 +33,7 @@
     "addYours": {
       "title": "Mangler gruppen din?",
       "body": "Send oss en e-post, så legger vi dere til på listen.",
-      "cta": "connect@trondheimdc.no"
+      "cta": "partner@trondheimdc.no"
     }
   },
   "archive": {
@@ -62,7 +62,7 @@
     ],
     "closingTitle": "Slik søker du",
     "closing": "Ta kontakt på e-post, så finner vi ut av det sammen. Fortell kort om arrangementet — tema, målgruppe og hva dere ønsker at vi skal dekke.",
-    "email": "connect@trondheimdc.no",
+    "email": "partner@trondheimdc.no",
     "reimburseTitle": "Har du allerede lagt ut for noe?",
     "reimburseBody": "Bruk utleggsskjemaet vårt for å få pengene tilbake.",
     "reimburseCta": "utlegg.trondheimdc.no"
@@ -73,7 +73,7 @@
   },
   "footer": {
     "utlegg": "Utleggsskjema",
-    "contact": "connect@trondheimdc.no",
+    "contact": "partner@trondheimdc.no",
     "orgNr": "Org.nr",
     "address": "Postboks 1275 Torgarden, 7462 Trondheim"
   }
