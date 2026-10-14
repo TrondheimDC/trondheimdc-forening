@@ -45,5 +45,6 @@ Open [http://localhost:3000](http://localhost:3000).
 - Conference archive: `src/data/archive.ts`
 - Vedtekter: `src/pages/vedtekter.tsx` (Norwegian only, legally binding text)
 - Support criteria: `src/pages/stotte.tsx`
+- Link preview image: `scripts/og-image.tsx` (rendered on every build; `pnpm og` to preview)
 
 See [TODO.md](./TODO.md) for outstanding content decisions before launch, and [docs/deploy.md](./docs/deploy.md) for deploying.
