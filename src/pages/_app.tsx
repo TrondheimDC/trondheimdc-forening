@@ -40,20 +40,10 @@ const AppShell = ({ Component, pageProps }: AppProps) => {
           href="/fonts/space-grotesk-latin-400-normal.woff2"
           crossOrigin="anonymous"
         />
-        <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/img/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/img/favicon-16x16.png"
-        />
-        <link rel="apple-touch-icon" href="/img/apple-touch-icon-180x180.png" />
+        {/* Rendered from public/icon.svg by scripts/build-icons.mjs. */}
+        <link rel="icon" href="/favicon.ico" sizes="48x48" />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </Head>
       {/* First focusable element on every page, invisible until a keyboard
           user tabs to it, then lets them jump past the header nav straight
