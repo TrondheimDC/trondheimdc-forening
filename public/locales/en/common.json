@@ -1,7 +1,7 @@
 {
   "notFound": "Not found",
   "meta": {
-    "description": "TrondheimDC is the association behind the TDC conference, and supports the local, volunteer-run IT community in the Trondheim region."
+    "description": "TrondheimDC is the association behind the TDC conference. It supports the volunteer-run tech community in the Trondheim region."
   },
   "menu": {
     "skipToContent": "Skip to content",
@@ -20,19 +20,19 @@
   "hero": {
     "kicker": "The association behind TDC",
     "title": "TrondheimDC",
-    "subtitle": "We run the TDC conference, and use the surplus on next year's conference and on supporting the volunteer tech community in Trondheim.",
+    "subtitle": "We run the TDC conference. The surplus goes to next year's conference and to supporting Trondheim's volunteer tech community.",
     "ctaGroups": "See the communities",
     "ctaStotte": "Apply for support"
   },
   "about": {
     "title": "What we do",
-    "p1": "TDC is organised by a cross-section of tech communities in the Trondheim region. The goal is a non-commercial, volunteer-run conference where technology enthusiasts can learn from each other, share knowledge, and meet.",
-    "p2": "Any surplus from the conference goes toward next year's conference and toward events that Trondheim's tech communities run throughout the year. Our bylaws commit the association to supporting the local, volunteer-run IT community financially.",
-    "p3": "We have run the conference since 2012."
+    "p1": "TDC is organised by a cross-section of the tech communities in the Trondheim region. The goal is a non-commercial, volunteer-run conference where tech enthusiasts can meet, share knowledge, and learn from each other.",
+    "p2": "Any surplus from the conference goes to next year's conference and to events that Trondheim's tech communities hold during the year. Our bylaws commit the association to funding the local, volunteer-run tech community.",
+    "p3": "We've been running the conference since 2012."
   },
   "groups": {
     "title": "Communities in Trondheim",
-    "subtitle": "A list of the tech communities in the Trondheim region, not just the ones we fund.",
+    "subtitle": "An overview of the tech communities in the Trondheim region, not just the ones we fund.",
     "visit": "Visit the community",
     "addYours": {
       "title": "Is your community missing?",
@@ -43,29 +43,29 @@
   "communityStand": {
     "title": "Community stand",
     "date": "19 October 2026",
-    "intro": "TDC is a conference by and for the tech community in Trondheim. But keeping that community alive takes more than one day a year, and what happens in between is run by the city's user groups.",
-    "offer": "So the committee sets aside a large stand at the conference on {{date}} for the user groups to share. It puts the groups in front of the attendees and shows the range of the city's tech scene.",
+    "intro": "TDC is a conference by and for the tech community in Trondheim. But a community needs more than one day a year to stay alive, and it's the city's user groups that keep it going between conferences.",
+    "offer": "So the committee sets aside a large shared stand for the user groups at the conference on {{date}}. It's a chance for the groups to meet the attendees and show off the breadth of the city's tech scene.",
     "getTitle": "What you get",
     "get": [
       "A spot on the shared stand, alongside the other user groups.",
-      "One full stand ticket, with access to the talks, lunch, and the after party.",
-      "A free hand with the stand itself. Banners, competitions, a bowl of sweets: it's up to you."
+      "One full stand ticket, including the talks, lunch, and the after party.",
+      "Free rein on the stand. Banners, competitions, a bowl of sweets: it's up to you."
     ],
     "expectTitle": "What we ask",
     "expect": [
-      "Someone at the stand during the breaks.",
-      "Telling us which of you gets the stand ticket."
+      "That someone is at the stand during the breaks.",
+      "That you tell us which of you gets the stand ticket."
     ],
     "signupTitle": "How to sign up",
     "signup": "Email us the name and email address of whoever gets the stand ticket, and we'll take it from there.",
     "email": "partner@trondheimdc.no",
     "groupsTitle": "Not on the list?",
-    "groupsBody": "The offer is for user groups in the Trondheim region. See who is already listed.",
+    "groupsBody": "The offer is for user groups in the Trondheim region. See who's already listed.",
     "groupsCta": "See the communities"
   },
   "archive": {
     "title": "Past conferences",
-    "subtitle": "TDC has run since 2012.",
+    "subtitle": "TDC has been held since 2012.",
     "notHeld": "Not held",
     "communityWeek": "TDC Community Week",
     "current": "This year's conference",
@@ -73,31 +73,31 @@
   },
   "stotte": {
     "title": "Support for communities",
-    "intro": "The association exists to support the local, volunteer-run IT community in the Trondheim region. Here's who can apply, and what we can pay for.",
+    "intro": "The association exists to support the local, volunteer-run tech community in the Trondheim region. Here's who can apply and what we can cover.",
     "criteriaTitle": "Who can apply?",
     "criteria": [
       "The event must take place in the Trondheim region.",
       "The event must be free and open to anyone who wants to attend.",
-      "The event must have a clear focus on technology, design, or creativity, relevant to the TDC community."
+      "The event must clearly focus on technology, design, or creativity, and be relevant to the TDC community."
     ],
     "categoriesTitle": "What can you apply for?",
     "categories": [
-      "Renting a suitable venue",
+      "Venue rental",
       "Food at the event",
       "Travel expenses for speakers",
-      "Meetup.com subscription"
+      "A Meetup.com subscription"
     ],
     "closingTitle": "How to apply",
-    "closing": "Get in touch by email and we'll figure it out together. Briefly describe the event: theme, audience, and what you'd like us to cover.",
+    "closing": "Email us and we'll work it out together. Tell us briefly about the event: the theme, the audience, and what you'd like us to cover.",
     "email": "partner@trondheimdc.no",
     "reimburseTitle": "Already paid for something?",
-    "reimburseBody": "Use our expense form to get reimbursed.",
+    "reimburseBody": "Use our expense form to get your money back.",
     "reimburseCta": "utlegg.trondheimdc.no"
   },
   "vedtekter": {
     "title": "Bylaws",
-    "note": "The bylaws are only available in Norwegian, since the Norwegian text is the legally binding one.",
-    "description": "The bylaws of the association TrondheimDC, org. no. 936657788."
+    "note": "The bylaws are only available in Norwegian, as the Norwegian text is the legally binding version.",
+    "description": "The bylaws of TrondheimDC, org. no. 936657788."
   },
   "footer": {
     "utlegg": "Expense form",
