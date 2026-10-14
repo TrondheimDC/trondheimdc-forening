@@ -24,14 +24,15 @@ const dataUrl = (type: string, data: Buffer) =>
   `data:${type};base64,${data.toString("base64")}`
 
 export default async function Image() {
-  // The logo is stacked blocks that only just touch; a hairline stroke closes
-  // the anti-aliasing seams that otherwise show between them.
-  const logo = (await file("public/img/logos/TDC_white.svg"))
-    .toString()
-    .replaceAll(
-      'fill="white"',
-      'fill="white" stroke="white" stroke-width="0.8"',
-    )
+  // trondheimdc.no's wordmark in its dark-theme green, as in the site header.
+  const letters = await Promise.all(
+    ["T-green", "D-green-long", "C-green"].map(async (name) =>
+      dataUrl(
+        "image/svg+xml",
+        await file("public/img/logos/letters", `${name}.svg`),
+      ),
+    ),
+  )
   // Satori doesn't decode WebP, so hand it a PNG of the hero backdrop.
   const background = await sharp(await file("public/img/hero-background.webp"))
     .png()
@@ -56,13 +57,18 @@ export default async function Image() {
         backgroundSize: "100% 100%, cover",
       }}
     >
-      {/* biome-ignore lint/performance/noImgElement: Satori renders plain <img>, not next/image */}
-      <img
-        src={dataUrl("image/svg+xml", Buffer.from(logo))}
-        height={92}
-        width={226}
-        alt=""
-      />
+      <div style={{ display: "flex", gap: 13 }}>
+        {letters.map((src, i) => (
+          // biome-ignore lint/performance/noImgElement: Satori renders plain <img>, not next/image
+          <img
+            key={src}
+            src={src}
+            height={92}
+            width={[71, 272, 71][i]}
+            alt=""
+          />
+        ))}
+      </div>
       <div style={{ display: "flex", flexDirection: "column" }}>
         <div
           style={{

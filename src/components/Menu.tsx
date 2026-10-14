@@ -1,10 +1,10 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
 import type { SVGProps } from "react"
 import { useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
+import { TdcWordmark } from "./TdcWordmark"
 
 const NAV_LINKS = [
   { href: "/#communities", key: "groups" as const },
@@ -95,15 +95,8 @@ export const Menu = () => {
   return (
     <nav className="fixed left-0 right-0 top-0 z-49 h-16 w-full border-b border-border bg-background/90 backdrop-blur-md">
       <div className="mx-auto flex h-full max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="flex items-center">
-          <Image
-            src="/img/logos/TDC_white.svg"
-            alt="TrondheimDC"
-            width={74}
-            height={30}
-            priority
-            className="invert-0 light:invert"
-          />
+        <Link href="/" className="flex items-center" aria-label="TrondheimDC">
+          <TdcWordmark />
         </Link>
 
         <div className="hidden items-center gap-6 md:flex">

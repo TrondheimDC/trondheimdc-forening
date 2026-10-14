@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { useTranslation } from "react-i18next"
+import { TdcWordmark } from "./TdcWordmark"
 import { ThemeToggle } from "./ThemeToggle"
 
 const SOCIALS = [
@@ -30,6 +31,7 @@ export const Footer = () => {
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
         <div className="flex flex-col gap-8 sm:flex-row sm:justify-between">
           <div className="space-y-1 text-sm text-muted-foreground">
+            <TdcWordmark className="mb-3 [--wordmark-size:2rem]" />
             <p className="font-display text-base text-foreground">
               TrondheimDC
             </p>

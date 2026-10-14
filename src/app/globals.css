@@ -460,4 +460,50 @@
     letter-spacing: 0.05em;
     overflow-wrap: break-word;
   }
+
+  /* trondheimdc.no's TDC wordmark (04-components/wordmark.css), rendered by
+     components/TdcWordmark.tsx. Green is the dark-theme brand colour; light
+     swaps to red because the pale green washes out on a light background. */
+  .tdc-wordmark {
+    --wordmark-size: 1.625rem; /* 26px, override per placement */
+    --wordmark-t: url("/img/logos/letters/T-green.svg");
+    --wordmark-d: url("/img/logos/letters/D-green-long.svg");
+    --wordmark-c: url("/img/logos/letters/C-green.svg");
+
+    display: inline-flex;
+    align-items: center;
+    gap: calc(var(--wordmark-size) * 0.14);
+    block-size: var(--wordmark-size);
+  }
+  .tdc-wordmark__letter {
+    display: block;
+    block-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .tdc-wordmark__letter--t {
+    aspect-ratio: 40 / 52;
+    background-image: var(--wordmark-t);
+  }
+  .tdc-wordmark__letter--d {
+    aspect-ratio: 154 / 52;
+    background-image: var(--wordmark-d);
+  }
+  .tdc-wordmark__letter--c {
+    aspect-ratio: 40 / 52;
+    background-image: var(--wordmark-c);
+  }
+  [data-theme="light"] .tdc-wordmark {
+    --wordmark-t: url("/img/logos/letters/T-red.svg");
+    --wordmark-d: url("/img/logos/letters/D-red-long.svg");
+    --wordmark-c: url("/img/logos/letters/C-red.svg");
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]):not([data-theme="light"]) .tdc-wordmark {
+      --wordmark-t: url("/img/logos/letters/T-red.svg");
+      --wordmark-d: url("/img/logos/letters/D-red-long.svg");
+      --wordmark-c: url("/img/logos/letters/C-red.svg");
+    }
+  }
 }
