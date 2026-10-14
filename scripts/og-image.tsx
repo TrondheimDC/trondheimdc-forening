@@ -50,7 +50,7 @@ export const OgImage = ({
       >
         {kicker}
       </div>
-      <div style={{ fontSize: 32, lineHeight: 1.4, maxWidth: 940 }}>
+      <div style={{ fontSize: 32, lineHeight: 1.4, maxWidth: 1040 }}>
         {subtitle}
       </div>
     </div>
