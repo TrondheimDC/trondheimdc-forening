@@ -1,14 +1,13 @@
 [tools]
-node = "25.6"
+node = "24"
 pnpm = "10.30"
-biome = "2.4.6"
 
 [tasks.install]
-description = "Install NPM dependencies"
-run = "pnpm install"
+description = "Install dependencies"
+run = "pnpm install --frozen-lockfile"
 
 [tasks.build]
-description = "Production build"
+description = "Static export to out/"
 run = "pnpm run build"
 
 [tasks.dev]
@@ -16,9 +15,13 @@ description = "Start dev server (http://localhost:3000)"
 run = "pnpm run dev"
 
 [tasks.start]
-description = "Start production server"
+description = "Serve the static export in out/"
 run = "pnpm run start"
 
 [tasks.lint]
-description = "Run biome"
+description = "Biome"
 run = "pnpm run lint"
+
+[tasks.check]
+description = "Lint and typecheck"
+run = ["pnpm run lint", "pnpm run typecheck"]

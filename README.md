@@ -26,7 +26,7 @@ mise run dev   # or: mise dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-**Tasks:** `mise run install` | `mise run dev` | `mise run build` | `mise run start`
+**Tasks:** `mise run install` | `mise run dev` | `mise run build` | `mise run check` | `mise run start`
 
 ### Without Mise
 

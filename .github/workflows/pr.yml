@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup mise (Node, pnpm, biome)
+      - name: Setup mise (Node, pnpm)
         uses: jdx/mise-action@v2
         with:
           install: true
@@ -31,7 +31,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup mise (Node, pnpm, biome)
+      - name: Setup mise (Node, pnpm)
         uses: jdx/mise-action@v2
         with:
           install: true
@@ -39,8 +39,8 @@ jobs:
       - name: Install dependencies
         run: mise run install
 
-      - name: Run lint
-        run: mise run lint
+      - name: Lint and typecheck
+        run: mise run check
 
   summary:
     runs-on: ubuntu-latest
