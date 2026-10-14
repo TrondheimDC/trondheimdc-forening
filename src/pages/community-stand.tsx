@@ -53,7 +53,7 @@ const CommunityStand = () => {
           <h2 className="text-xl">{t("groupsTitle")}</h2>
           <p className="mt-3 text-muted-foreground">{t("groupsBody")}</p>
           <Link
-            href="/#meetups"
+            href="/#communities"
             className="mt-4 inline-block font-medium text-primary hover:underline"
           >
             {t("groupsCta")}

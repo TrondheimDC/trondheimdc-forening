@@ -9,7 +9,7 @@ export const GroupsIndex = () => {
   const { t } = useTranslation("common", { keyPrefix: "groups" })
 
   return (
-    <section id="meetups" className="scroll-mt-16 border-t border-border">
+    <section id="communities" className="scroll-mt-16 border-t border-border">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl">{t("title")}</h2>

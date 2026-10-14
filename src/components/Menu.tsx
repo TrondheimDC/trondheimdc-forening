@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 
 const NAV_LINKS = [
-  { href: "/#meetups", key: "groups" as const },
+  { href: "/#communities", key: "groups" as const },
   { href: "/#arkiv", key: "archive" as const },
   { href: "/community-stand", key: "communityStand" as const },
   { href: "/stotte", key: "stotte" as const },
