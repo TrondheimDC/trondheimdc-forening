@@ -10,7 +10,8 @@ export type Group = {
 // of groups TDC has funded; see /stotte for the funding criteria.
 // Blurbs are placeholder paraphrases of each group's own meetup.com
 // description; see TODO.md before treating them as final copy.
-export const groups: Group[] = [
+// Order here does not matter; add new groups wherever.
+const unsorted: Group[] = [
   {
     slug: "javabin-trondheim",
     name: "javaBin Trondheim",
@@ -68,8 +69,11 @@ export const groups: Group[] = [
   },
 ]
 
-// Looked up by slug rather than by index: the hero picks a handful of these
-// logos out for its floating tiles, and doing that positionally meant adding
-// or reordering a group here silently swapped which logos the hero showed.
-export const groupBySlug = (slug: string): Group | undefined =>
-  groups.find((group) => group.slug === slug)
+// Sorted once here rather than at each call site, so the index renders
+// alphabetically and a group added above lands in the right place without
+// anyone hunting for the right line. localeCompare rather than `<`, which
+// compares code points and would drop dotFEMMES and javaBin below every
+// name that starts with a capital.
+export const groups: Group[] = [...unsorted].sort((a, b) =>
+  a.name.localeCompare(b.name, "no"),
+)
