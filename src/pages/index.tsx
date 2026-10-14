@@ -12,7 +12,7 @@ const Home = () => {
         <title>TrondheimDC</title>
         <meta
           name="description"
-          content="TrondheimDC er foreningen bak TDC-konferansen, og støtter det lokale, frivillige IT-fagmiljøet i Trondheimsregionen."
+          content="TrondheimDC er foreningen bak TDC-konferansen og støtter det lokale, frivillige IT-fagmiljøet i Trondheimsregionen."
         />
       </Head>
       <Hero />

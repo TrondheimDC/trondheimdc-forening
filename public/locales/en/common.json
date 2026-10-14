@@ -24,12 +24,12 @@
   "about": {
     "title": "What we do",
     "p1": "TDC is organised by a cross-section of tech communities in the Trondheim region. The goal is a non-commercial, volunteer-run conference where technology enthusiasts can learn from each other, share knowledge, and meet.",
-    "p2": "Any surplus from the conference goes toward running next year's conference, and toward supporting events in Trondheim organised by different tech groups. Our bylaws explicitly state that the association shall support the local, volunteer-run IT community through financial support schemes.",
+    "p2": "Any surplus from the conference goes toward next year's conference and toward events that Trondheim's tech communities run throughout the year. Our bylaws commit the association to supporting the local, volunteer-run IT community financially.",
     "p3": "We have run the conference since 2012."
   },
   "groups": {
     "title": "Communities in Trondheim",
-    "subtitle": "An independent index of tech communities in the Trondheim region, not just the ones we fund.",
+    "subtitle": "A list of the tech communities in the Trondheim region, not just the ones we fund.",
     "visit": "Visit the community",
     "addYours": {
       "title": "Is your community missing?",
@@ -40,21 +40,21 @@
   "communityStand": {
     "title": "Community stand",
     "date": "19 October 2026",
-    "intro": "TDC is a conference by and for the tech community in Trondheim. But keeping that community alive takes more than one day a year. The things that happen in between are run by the city's user groups.",
-    "offer": "So the committee sets aside a larger shared stand at the conference on {{date}} for the user groups to share. The point is to put the groups in front of the attendees, and to show the range of the city's tech scene.",
+    "intro": "TDC is a conference by and for the tech community in Trondheim. But keeping that community alive takes more than one day a year, and what happens in between is run by the city's user groups.",
+    "offer": "So the committee sets aside a large stand at the conference on {{date}} for the user groups to share. It puts the groups in front of the attendees and shows the range of the city's tech scene.",
     "getTitle": "What you get",
     "get": [
       "A spot on the shared stand, alongside the other user groups.",
       "One full stand ticket, with access to the talks, lunch, and the after party.",
-      "A free hand with the stand itself. Banners, competitions, a bowl of sweets: that is up to you."
+      "A free hand with the stand itself. Banners, competitions, a bowl of sweets: it's up to you."
     ],
     "expectTitle": "What we ask",
     "expect": [
-      "That the stand is staffed during the breaks.",
-      "That you tell us who among you gets the stand ticket, and an email address where we can reach them."
+      "Someone at the stand during the breaks.",
+      "Telling us which of you gets the stand ticket."
     ],
     "signupTitle": "How to sign up",
-    "signup": "Send us an email with the name of whoever should have the stand ticket and an email address where we can reach them, and we will take it from there.",
+    "signup": "Email us the name and email address of whoever gets the stand ticket, and we'll take it from there.",
     "email": "partner@trondheimdc.no",
     "groupsTitle": "Not on the list?",
     "groupsBody": "The offer is for user groups in the Trondheim region. See who is already listed.",
@@ -70,7 +70,7 @@
   },
   "stotte": {
     "title": "Support for communities",
-    "intro": "The association exists to support the local, volunteer-run IT community in the Trondheim region. Below are the criteria for what we can contribute to.",
+    "intro": "The association exists to support the local, volunteer-run IT community in the Trondheim region. Here's who can apply, and what we can pay for.",
     "criteriaTitle": "Who can apply?",
     "criteria": [
       "The event must take place in the Trondheim region.",
@@ -93,7 +93,7 @@
   },
   "vedtekter": {
     "title": "Bylaws",
-    "note": "The bylaws are only available in Norwegian, as that is the legally binding document for the association."
+    "note": "The bylaws are only available in Norwegian, since the Norwegian text is the legally binding one."
   },
   "footer": {
     "utlegg": "Expense form",

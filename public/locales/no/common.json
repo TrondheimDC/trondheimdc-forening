@@ -17,19 +17,19 @@
   "hero": {
     "kicker": "Foreningen bak TDC",
     "title": "TrondheimDC",
-    "subtitle": "Vi arrangerer TDC-konferansen, og bruker overskuddet på å støtte det frivillige teknologimiljøet i Trondheim resten av året.",
+    "subtitle": "Vi arrangerer TDC-konferansen og bruker overskuddet på å støtte det frivillige teknologimiljøet i Trondheim resten av året.",
     "ctaGroups": "Se faggruppene",
     "ctaStotte": "Søk om støtte"
   },
   "about": {
     "title": "Hva vi gjør",
-    "p1": "TDC arrangeres av et tverrsnitt av ulike teknologimiljøer i Trondheimsregionen. Målet er en ikke-kommersiell, frivillig drevet konferanse hvor teknologientusiaster kan lære av hverandre, dele kunnskap og møtes.",
-    "p2": "Alt eventuelt overskudd fra konferansen brukes til å drive fram neste års konferanse og til å støtte arrangementer i Trondheim organisert av ulike teknologigrupperinger. I vedtektene er det slått fast at foreningen skal støtte det lokale, frivillige IT-fagmiljøet gjennom finansielle støtteordninger.",
+    "p1": "TDC arrangeres av et tverrsnitt av teknologimiljøene i Trondheimsregionen. Målet er en ikke-kommersiell, frivillig drevet konferanse der teknologientusiaster kan møtes, dele kunnskap og lære av hverandre.",
+    "p2": "Eventuelt overskudd fra konferansen går til neste års konferanse og til arrangementer som teknologimiljøene i Trondheim holder gjennom året. Vedtektene slår fast at foreningen skal støtte det lokale, frivillige IT-fagmiljøet økonomisk.",
     "p3": "Vi har drevet konferansen siden 2012."
   },
   "groups": {
     "title": "Faggrupper i Trondheim",
-    "subtitle": "En uavhengig indeks over faggrupper i Trondheimsregionen, ikke bare de vi støtter økonomisk.",
+    "subtitle": "En oversikt over faggruppene i Trondheimsregionen, ikke bare dem vi støtter økonomisk.",
     "visit": "Besøk faggruppen",
     "addYours": {
       "title": "Mangler gruppen din?",
@@ -41,7 +41,7 @@
     "title": "Community stand",
     "date": "19. oktober 2026",
     "intro": "TDC er en konferanse av og for IT-miljøet i Trondheim. Men skal miljøet være levende, må det skje ting mellom de årlige konferansene også, og det er brukergruppene i byen som står for det.",
-    "offer": "Derfor setter komitéen av en større fellesstand på konferansen {{date}}, som brukergruppene deler på. Formålet er å promotere gruppene overfor konferansedeltakerne, og å vise fram mangfoldet i IT-miljøet i byen.",
+    "offer": "Derfor setter komiteen av en stor fellesstand på konferansen {{date}}, som brukergruppene deler på. Der kan gruppene gjøre seg kjent for konferansedeltakerne og vise fram bredden i IT-miljøet i byen.",
     "getTitle": "Dette får dere",
     "get": [
       "Plass på fellesstanden, sammen med de andre brukergruppene.",
@@ -51,10 +51,10 @@
     "expectTitle": "Dette forventer vi",
     "expect": [
       "At standen er bemannet i pausene.",
-      "At dere gir oss navnet på den av dere som skal ha standbilletten, og en e-postadresse vi kan nå vedkommende på."
+      "At dere sier fra hvem av dere som skal ha standbilletten."
     ],
-    "signupTitle": "Slik melder dere dere på",
-    "signup": "Send oss en e-post med navnet på den som skal ha standbilletten og en e-postadresse vi kan nå vedkommende på, så tar vi det derfra.",
+    "signupTitle": "Påmelding",
+    "signup": "Send oss en e-post med navn og e-postadresse til den som skal ha standbilletten, så tar vi det derfra.",
     "email": "partner@trondheimdc.no",
     "groupsTitle": "Er dere ikke på listen?",
     "groupsBody": "Tilbudet gjelder brukergruppene i Trondheimsregionen. Se hvem som allerede står oppført.",
@@ -62,7 +62,7 @@
   },
   "archive": {
     "title": "Tidligere konferanser",
-    "subtitle": "TDC har blitt arrangert siden 2012.",
+    "subtitle": "TDC har vært arrangert siden 2012.",
     "notHeld": "Ikke avholdt",
     "communityWeek": "TDC Community Week",
     "current": "Årets konferanse",
@@ -70,21 +70,21 @@
   },
   "stotte": {
     "title": "Støtte til faggrupper",
-    "intro": "Foreningen skal støtte det lokale, frivillige IT-fagmiljøet i Trondheimsregionen. Under er kriteriene for hva vi kan bidra til.",
+    "intro": "Foreningen skal støtte det lokale, frivillige IT-fagmiljøet i Trondheimsregionen. Her ser dere hvem som kan søke, og hva vi kan dekke.",
     "criteriaTitle": "Hvem kan søke?",
     "criteria": [
       "Arrangementet må finne sted i Trondheimsregionen.",
       "Arrangementet må være gratis og åpent for alle som ønsker å delta.",
-      "Arrangementet må ha et tydelig fokus på teknologi, design eller kreativitet, relevant for TDC-samfunnet."
+      "Arrangementet må handle tydelig om teknologi, design eller kreativitet, og være relevant for TDC-miljøet."
     ],
     "categoriesTitle": "Hva kan det søkes støtte til?",
     "categories": [
       "Leie av egnede lokaler",
-      "Mat og bespisning på arrangementet",
+      "Mat på arrangementet",
       "Reiseutgifter for foredragsholdere",
       "Abonnement på meetup.com"
     ],
-    "closingTitle": "Slik søker du",
+    "closingTitle": "Slik søker dere",
     "closing": "Ta kontakt på e-post, så finner vi ut av det sammen. Fortell kort om arrangementet: tema, målgruppe og hva dere ønsker at vi skal dekke.",
     "email": "partner@trondheimdc.no",
     "reimburseTitle": "Har du allerede lagt ut for noe?",
@@ -93,7 +93,7 @@
   },
   "vedtekter": {
     "title": "Vedtekter",
-    "note": "Vedtektene finnes kun på norsk, da dette er det juridisk gjeldende dokumentet for foreningen."
+    "note": "Vedtektene finnes bare på norsk, fordi det er den norske teksten som gjelder juridisk."
   },
   "footer": {
     "utlegg": "Utleggsskjema",
