@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next"
-import { no, SITE_URL } from "@/lib/metadata"
+import { no, OG_IMAGE, SITE_URL } from "@/lib/metadata"
 import { Providers } from "./providers"
 import "./globals.css"
 
@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     template: "TrondheimDC | %s",
   },
   description: no.meta.description,
+  // Pages replace this with pageMetadata(); it's what the 404 page gets.
+  openGraph: { siteName: "TrondheimDC", images: [OG_IMAGE] },
   twitter: { card: "summary_large_image" },
 }
 

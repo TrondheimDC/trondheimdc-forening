@@ -16,9 +16,9 @@ The association's website: what it does, the user groups in Trondheim, the suppo
 
 - **Static site.** Next.js App Router with `output: "export"`, served by nginx (`docs/deploy.md`). No app server and no secrets. Nothing renders per request: no Route Handlers that read the request, no cookies.
 - **Every page is prerendered once, in Norwegian.** English is a client-side switch (`src/i18n.ts`, `react-i18next`), so components that show copy are client components. Each `page.tsx` is a server component that exports `metadata` and renders the page body from `content.tsx`.
-- **Titles and descriptions** come from the Norwegian locale through `pageMetadata()` in `src/lib/metadata.ts`. Use it for every page: Next replaces a parent's `openGraph` instead of merging it, and a page that sets its own loses the image from `opengraph-image.tsx`.
+- **Titles and descriptions** come from the Norwegian locale through `pageMetadata()` in `src/lib/metadata.ts`. Use it for every page: Next replaces a parent's `openGraph` instead of merging it, so each page sets the whole thing, image included.
 - **Copy lives in `public/locales/{no,en}/common.json`.** Change both files together. Data lives in `src/data` (groups, archive).
-- **Images:** `src/app/icon.svg` is the source for the favicon and apple icon (`node scripts/build-icons.mjs`); `src/app/opengraph-image.tsx` is the link preview, rendered at build time.
+- **Images:** `src/app/icon.svg` is the source for the favicon and apple icon (`node scripts/build-icons.mjs`); `src/app/og.png/route.tsx` is the link preview, rendered at build time to `/og.png`.
 
 ## Copy
 

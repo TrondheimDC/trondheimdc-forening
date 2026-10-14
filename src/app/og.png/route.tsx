@@ -1,5 +1,9 @@
-// The link preview image for Slack, LinkedIn, Facebook and so on. Next renders
-// it once at build time and adds the og:image tags to every page.
+// The link preview image for Slack, LinkedIn, Facebook and so on, served as
+// /og.png. A Route Handler in a folder named like a file is exported as that
+// file (docs: guides/static-exports), so it gets a real .png name and nginx
+// sends the right Content-Type without any special config. Next's
+// opengraph-image.tsx convention would export it without an extension.
+// pageMetadata() in src/lib/metadata.ts points every page's og:image here.
 // Satori does the rendering and supports a subset of CSS: every element with
 // more than one child needs display: flex. https://github.com/vercel/satori#css
 import { readFile } from "node:fs/promises"
@@ -8,11 +12,10 @@ import { ImageResponse } from "next/og"
 import sharp from "sharp"
 import { no, OG_IMAGE } from "@/lib/metadata"
 
-export const alt = OG_IMAGE.alt
-export const size = { width: OG_IMAGE.width, height: OG_IMAGE.height }
-export const contentType = "image/png"
 // Required with output: "export"; the image is rendered once at build time.
 export const dynamic = "force-static"
+
+const size = { width: OG_IMAGE.width, height: OG_IMAGE.height }
 
 const PADDING = { x: 80, y: 72 }
 
@@ -23,7 +26,7 @@ const font = (pkg: string, name: string) =>
 const dataUrl = (type: string, data: Buffer) =>
   `data:${type};base64,${data.toString("base64")}`
 
-export default async function Image() {
+export async function GET() {
   // trondheimdc.no's wordmark in its dark-theme green, as in the site header.
   const letters = await Promise.all(
     ["T-green", "D-green-long", "C-green"].map(async (name) =>

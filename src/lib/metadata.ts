@@ -8,17 +8,16 @@ export const SITE_URL = "https://forening.trondheimdc.no"
 // link previews see. Switching to English happens in the browser afterwards.
 export { no }
 
-// Rendered by app/opengraph-image.tsx, which reads its alt text and size from here.
+// Rendered by app/og.png/route.tsx, which reads its size from here.
 export const OG_IMAGE = {
-  url: "/opengraph-image",
+  url: "/og.png",
   alt: "TDC-logoen og «Foreningen bak TDC»",
   width: 1200,
   height: 630,
 }
 
-// Next replaces a parent's openGraph object instead of merging it, and a page
-// that sets openGraph also loses the image from app/opengraph-image.tsx. So
-// every page builds the whole thing here, image included.
+// Next replaces a parent's openGraph object instead of merging it, so every
+// page builds the whole thing here, image included.
 export const pageMetadata = ({
   title,
   description,

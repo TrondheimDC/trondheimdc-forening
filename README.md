@@ -45,7 +45,7 @@ Open [http://localhost:3000](http://localhost:3000).
 - Conference archive: `src/data/archive.ts`
 - Vedtekter: `src/app/vedtekter/content.tsx` (Norwegian only, legally binding text)
 - Support criteria: `src/app/stotte/content.tsx`
-- Link preview image: `src/app/opengraph-image.tsx` (rendered at build time; open `/opengraph-image` in `pnpm dev` to preview)
+- Link preview image: `src/app/og.png/route.tsx` (rendered at build time to `/og.png`; open it in `pnpm dev` to preview)
 - App icon: `src/app/icon.svg`, then `node scripts/build-icons.mjs` for `favicon.ico` and `apple-icon.png`
 - Page titles and descriptions: the `metadata` export in each `src/app/**/page.tsx`
 
