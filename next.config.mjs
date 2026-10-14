@@ -14,6 +14,11 @@ function defineNextConfig(config) {
 export default defineNextConfig({
   reactStrictMode: true,
   output: "export",
+  // Extra hosts allowed to load the dev server, e.g. a remote dev environment.
+  // Comma-separated, as in regnskap and checkin.
+  allowedDevOrigins: process.env.ALLOWED_DEV_ORIGINS?.split(",")
+    .map((origin) => origin.trim())
+    .filter(Boolean),
   images: {
     unoptimized: true,
   },
