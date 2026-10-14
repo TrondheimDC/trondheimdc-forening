@@ -24,7 +24,7 @@ The association's website: what it does, the user groups in Trondheim, the suppo
 
 - Norwegian bokmål first, English second. Write it in TDC's voice, short and plain.
 - Facts about TDC (history, numbers, offers) need a source: a TDC page or someone on the committee. Never paraphrase a search result into site copy.
-- New or changed copy that hasn't been signed off gets a line in `TODO.md`.
+- New or changed copy that hasn't been signed off gets a line in `TODO.local.md`. It is gitignored: the repo is public, and sign-off notes are internal.
 - No em dashes. Keep "TDC-samfunnet" as written.
 - The vedtekter (`src/app/vedtekter/content.tsx`) are the legally binding text. Don't edit them for style.
 

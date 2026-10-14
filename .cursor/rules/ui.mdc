@@ -8,6 +8,6 @@ alwaysApply: true
 Follow AGENTS.md.
 
 - Copy is Norwegian bokmål first, with English alongside. Every string lives in both `public/locales/no/common.json` and `en/common.json`; change them together.
-- TDC facts need a source (a TDC page or the committee). Unsigned copy gets a line in `TODO.md`. No em dashes.
+- TDC facts need a source (a TDC page or the committee). Unsigned copy gets a line in `TODO.local.md` (gitignored). No em dashes.
 - The site is a static export, prerendered in Norwegian. Pages export `metadata` via `pageMetadata()`; anything that reads the language or theme is a client component.
 - Do not flash content in after hydration. Reserve space for late content, and style both themes with `light:`/`dark:` rather than reading the theme in JS.

@@ -9,7 +9,7 @@ export type Group = {
 // Trondheim tech/design meetup groups. This is a general index, not a list
 // of groups TDC has funded; see /stotte for the funding criteria.
 // Blurbs are placeholder paraphrases of each group's own meetup.com
-// description; see TODO.md before treating them as final copy.
+// description, not yet signed off by the groups.
 // Order here does not matter; add new groups wherever.
 const unsorted: Group[] = [
   {

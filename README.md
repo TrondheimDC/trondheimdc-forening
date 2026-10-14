@@ -49,4 +49,4 @@ Open [http://localhost:3000](http://localhost:3000).
 - App icon: `src/app/icon.svg`, then `node scripts/build-icons.mjs` for `favicon.ico` and `apple-icon.png`
 - Page titles and descriptions: the `metadata` export in each `src/app/**/page.tsx`
 
-See [TODO.md](./TODO.md) for outstanding content decisions before launch, and [docs/deploy.md](./docs/deploy.md) for deploying.
+See [TODO.md](./TODO.md) for what is left before launch, and [docs/deploy.md](./docs/deploy.md) for deploying.
