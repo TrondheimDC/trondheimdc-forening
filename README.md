@@ -6,7 +6,7 @@ Trondheimsregionen.
 
 ## Tech stack
 
-- **Framework:** Next.js (Pages Router, static export via `output: "export"`)
+- **Framework:** Next.js (App Router, static export via `output: "export"`)
 - **Language:** TypeScript (strict mode)
 - **Styling:** Tailwind CSS, design tokens ported from [trondheimdc.no](https://github.com/TrondheimDC/trondheimdc.no)
 - **i18n:** Client-side i18next (Norwegian / English), Norwegian default
@@ -43,8 +43,10 @@ Open [http://localhost:3000](http://localhost:3000).
 
 - Meetup groups: `src/data/groups.ts`
 - Conference archive: `src/data/archive.ts`
-- Vedtekter: `src/pages/vedtekter.tsx` (Norwegian only, legally binding text)
-- Support criteria: `src/pages/stotte.tsx`
-- Link preview image: `scripts/og-image.tsx` (rendered on every build; `pnpm og` to preview)
+- Vedtekter: `src/app/vedtekter/content.tsx` (Norwegian only, legally binding text)
+- Support criteria: `src/app/stotte/content.tsx`
+- Link preview image: `src/app/opengraph-image.tsx` (rendered at build time; open `/opengraph-image` in `pnpm dev` to preview)
+- App icon: `src/app/icon.svg`, then `node scripts/build-icons.mjs` for `favicon.ico` and `apple-icon.png`
+- Page titles and descriptions: the `metadata` export in each `src/app/**/page.tsx`
 
 See [TODO.md](./TODO.md) for outstanding content decisions before launch, and [docs/deploy.md](./docs/deploy.md) for deploying.

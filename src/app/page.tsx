@@ -1,10 +1,14 @@
-import { useTranslation } from "react-i18next"
 import { About } from "@/components/About"
 import { Archive } from "@/components/Archive"
 import { GroupsIndex } from "@/components/GroupsIndex"
 import { Hero } from "@/components/Hero"
 import { PhotoStrip } from "@/components/PhotoStrip"
-import { Seo, SITE_URL } from "@/components/Seo"
+import { no, pageMetadata, SITE_URL } from "@/lib/metadata"
+
+export const metadata = pageMetadata({
+  description: no.meta.description,
+  path: "/",
+})
 
 // Lets search engines show the association's details (org.nr, address,
 // contact) in their own panel. Same facts as the footer.
@@ -27,12 +31,9 @@ const organization = {
   sameAs: ["https://trondheimdc.no"],
 }
 
-const Home = () => {
-  const { t } = useTranslation("common", { keyPrefix: "meta" })
-
+export default function Home() {
   return (
     <>
-      <Seo description={t("description")} path="/" />
       <script
         type="application/ld+json"
         // biome-ignore lint/security/noDangerouslySetInnerHtml: static JSON, not user input
@@ -46,5 +47,3 @@ const Home = () => {
     </>
   )
 }
-
-export default Home

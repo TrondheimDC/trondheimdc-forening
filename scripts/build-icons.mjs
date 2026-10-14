@@ -1,7 +1,6 @@
-// Renders every app icon from public/icon.svg with headless Chromium (Playwright):
-//   public/apple-touch-icon.png (180, full-bleed) and public/favicon.ico (16/32/48).
-// Same script as in checkin, regnskap and sales, but this is a Pages Router site, so the
-// icons live in public/ (linked from src/pages/_app.tsx) rather than in src/app/.
+// Renders every app icon from src/app/icon.svg with headless Chromium (Playwright):
+//   src/app/apple-icon.png (180, full-bleed) and src/app/favicon.ico (16/32/48).
+// Same script as in checkin, regnskap and sales.
 //
 // Playwright is a devDependency here. CHROMIUM_PATH overrides the browser binary
 // (default: newest ~/.cache/ms-playwright headless shell).
@@ -10,7 +9,7 @@ import { homedir } from "node:os"
 import { join } from "node:path"
 
 const root = new URL("..", import.meta.url).pathname
-const source = join(root, "public/icon.svg")
+const source = join(root, "src/app/icon.svg")
 const svg = readFileSync(source, "utf8")
 
 async function loadChromium() {
@@ -72,10 +71,10 @@ async function render(markup, size) {
 // iOS masks the apple-icon itself, so give it a square background.
 const fullBleed = svg.replace('rx="205"', 'rx="0"')
 
-writeFileSync(join(root, "public/apple-touch-icon.png"), await render(fullBleed, 180))
+writeFileSync(join(root, "src/app/apple-icon.png"), await render(fullBleed, 180))
 const favicon = []
 for (const size of [16, 32, 48]) favicon.push({ size, data: await render(svg, size) })
-writeFileSync(join(root, "public/favicon.ico"), ico(favicon))
+writeFileSync(join(root, "src/app/favicon.ico"), ico(favicon))
 
 await browser.close()
-console.log("Icons written from public/icon.svg")
+console.log("Icons written from src/app/icon.svg")

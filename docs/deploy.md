@@ -48,6 +48,7 @@ curl -sI https://forening.trondheimdc.no | head -1                    # 200
 curl -sI https://forening.trondheimdc.no/stotte | head -1             # 200
 curl -sI https://forening.trondheimdc.no/st%C3%B8tte | head -1        # 200 (the /støtte alias)
 curl -sI https://forening.trondheimdc.no/finnes-ikke | head -1        # 404
+curl -sI https://forening.trondheimdc.no/opengraph-image | grep -i ^content-type   # image/png
 curl -sI http://forening.trondheimdc.no | grep -i ^location           # → https://
 ```
 
