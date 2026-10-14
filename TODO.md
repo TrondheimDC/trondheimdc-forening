@@ -8,7 +8,7 @@
 
 ## Infrastructure (outside this repo)
 
-- [ ] **nginx vhost + TLS cert** for `forening.trondheimdc.no`. DNS already resolves (wildcard CNAME via
+- [ ] **nginx vhost + TLS cert** (run `docs/setup-server.sh`, see `docs/deploy.md`) for `forening.trondheimdc.no`. DNS already resolves (wildcard CNAME via
       `worldwide.trondheimdc.no`), so only the vhost/cert is missing.
 - [ ] Confirm `SSH_HOST` / `SSH_USER` / `SSH_PRIVATE_KEY` org secrets (used by
       `.github/workflows/cd.yml`) have access to

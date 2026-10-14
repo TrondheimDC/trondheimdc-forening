@@ -12,7 +12,7 @@ Trondheimsregionen.
 - **i18n:** Client-side i18next (Norwegian / English), Norwegian default
 - **Package manager:** pnpm
 
-**Requirements:** Node.js ≥ 23.
+**Requirements:** Node.js 24 (pinned in `mise.toml`).
 
 ## Getting started
 
@@ -46,4 +46,4 @@ Open [http://localhost:3000](http://localhost:3000).
 - Vedtekter: `src/pages/vedtekter.tsx` (Norwegian only, legally binding text)
 - Support criteria: `src/pages/stotte.tsx`
 
-See [TODO.md](./TODO.md) for outstanding content decisions before launch.
+See [TODO.md](./TODO.md) for outstanding content decisions before launch, and [docs/deploy.md](./docs/deploy.md) for deploying.
