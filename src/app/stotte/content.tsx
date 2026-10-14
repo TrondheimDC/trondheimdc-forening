@@ -10,7 +10,7 @@ export const Stotte = () => {
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-20 sm:px-6">
-      <h1 className="text-4xl">{t("title")}</h1>
+      <h1>{t("title")}</h1>
       <p className="mt-4 text-muted-foreground">{t("intro")}</p>
 
       <h2 className="mt-10 text-xl">{t("criteriaTitle")}</h2>

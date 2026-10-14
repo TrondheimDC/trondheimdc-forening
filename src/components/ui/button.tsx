@@ -4,24 +4,30 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
+// trondheimdc.no's button (04-components/button.css): a pill in the display
+// face, uppercase, that lifts on hover. Icon buttons skip the type treatment.
 const buttonVariants = cva(
-  "inline-flex shrink-0 items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-full border-2 border-transparent font-display font-semibold uppercase leading-none tracking-wide transition-[translate,background-color,color,border-color] duration-150 ease-out outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-55 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        // Green on dark, light red on light: trondheimdc.no's primary CTA.
+        default:
+          "bg-primary text-always-dark hover:-translate-y-0.5 hover:bg-success active:translate-y-0 light:bg-destructive light:hover:bg-[color-mix(in_srgb,var(--color-bg-danger)_85%,var(--color-black))]",
+        // trondheimdc.no's .btn--ghost
         outline:
-          "border border-border bg-transparent hover:bg-accent hover:text-accent-foreground",
+          "border-border-strong bg-transparent text-foreground hover:-translate-y-0.5 hover:bg-card active:translate-y-0",
+        // trondheimdc.no's .btn--dark
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+          "bg-always-dark text-white hover:-translate-y-0.5 hover:bg-[var(--color-black-2)] active:translate-y-0",
+        ghost: "text-foreground hover:bg-card",
+        link: "h-auto rounded-none border-0 p-0 normal-case tracking-normal text-primary underline-offset-4 hover:underline",
       },
       size: {
-        default: "h-9 px-4 py-2 has-[>svg]:px-3",
-        sm: "h-8 gap-1.5 rounded-md px-3 has-[>svg]:px-2.5",
-        lg: "h-11 rounded-md px-6 text-base has-[>svg]:px-5",
-        icon: "size-9",
+        default: "px-5 py-3 text-base",
+        sm: "px-4 py-2 text-sm",
+        lg: "px-8 py-4 text-lg",
+        icon: "size-9 border-0 font-sans normal-case tracking-normal",
       },
     },
     defaultVariants: {

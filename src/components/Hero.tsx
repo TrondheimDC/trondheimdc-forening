@@ -239,7 +239,7 @@ export const Hero = () => {
         <p className="text-sm font-medium uppercase tracking-wider text-foreground">
           {t("kicker")}
         </p>
-        <h1 className="text-4xl sm:text-5xl">{t("title")}</h1>
+        <h1 className="text-display">{t("title")}</h1>
         <p className="text-balance text-lg text-foreground">{t("subtitle")}</p>
         <div className="mt-2 flex flex-wrap items-center justify-center gap-3">
           <Button asChild size="lg">

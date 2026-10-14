@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  // Browser chrome on mobile, matched to --bg-base in each theme.
+  // Browser chrome on mobile, matched to --color-bg-base in each theme.
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#fefefe" },
     { media: "(prefers-color-scheme: dark)", color: "#0f0f0f" },

@@ -20,9 +20,7 @@ export const Vedtekter = () => {
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-20 sm:px-6">
-      <h1 lang="no" className="text-4xl">
-        Vedtekter for TrondheimDC
-      </h1>
+      <h1 lang="no">Vedtekter for TrondheimDC</h1>
       <p className="mt-4 rounded-lg border border-border bg-card p-4 text-sm text-muted-foreground">
         {t("note")}
       </p>
@@ -47,7 +45,7 @@ export const Vedtekter = () => {
         className="prose-vedtekter mt-12 space-y-12 text-muted-foreground"
       >
         <section id="1" className="scroll-mt-20">
-          <h2 className="text-foreground">§1 Navn</h2>
+          <h2 className="text-xl text-foreground">§1 Navn</h2>
           <p>
             Foreningens registrerte navn er TrondheimDC, men forkortelsen TDC
             kan også brukes.
@@ -55,7 +53,7 @@ export const Vedtekter = () => {
         </section>
 
         <section id="2" className="scroll-mt-20">
-          <h2 className="text-foreground">§2 Formål</h2>
+          <h2 className="text-xl text-foreground">§2 Formål</h2>
           <ol className="list-decimal space-y-3 pl-5">
             <li>
               Foreningens formål er å arrangere en community-drevet og uavhengig
@@ -81,7 +79,7 @@ export const Vedtekter = () => {
         </section>
 
         <section id="3" className="scroll-mt-20">
-          <h2 className="text-foreground">§3 Organisasjonsform</h2>
+          <h2 className="text-xl text-foreground">§3 Organisasjonsform</h2>
           <ol className="list-decimal space-y-3 pl-5">
             <li>
               Foreningen er en frivillig, ideell og frittstående
@@ -102,7 +100,7 @@ export const Vedtekter = () => {
         </section>
 
         <section id="4" className="scroll-mt-20">
-          <h2 className="text-foreground">§4 Medlemskap</h2>
+          <h2 className="text-xl text-foreground">§4 Medlemskap</h2>
           <ol className="list-decimal space-y-3 pl-5">
             <li>
               Foreningen er åpen for alle som har en interesse i
@@ -121,7 +119,7 @@ export const Vedtekter = () => {
         </section>
 
         <section id="5" className="scroll-mt-20">
-          <h2 className="text-foreground">§5 Årsmøte</h2>
+          <h2 className="text-xl text-foreground">§5 Årsmøte</h2>
           <ol className="list-decimal space-y-3 pl-5">
             <li>
               Årsmøtet er foreningens øverste organ og beslutningsmyndighet.
@@ -160,7 +158,7 @@ export const Vedtekter = () => {
         </section>
 
         <section id="6" className="scroll-mt-20">
-          <h2 className="text-foreground">§6 Ekstraordinære årsmøte</h2>
+          <h2 className="text-xl text-foreground">§6 Ekstraordinære årsmøte</h2>
           <ol className="list-decimal space-y-3 pl-5">
             <li>
               Ekstraordinære årsmøter blir avholdt når styret bestemmer det,
@@ -174,7 +172,7 @@ export const Vedtekter = () => {
         </section>
 
         <section id="7" className="scroll-mt-20">
-          <h2 className="text-foreground">§7 Styret</h2>
+          <h2 className="text-xl text-foreground">§7 Styret</h2>
           <ol className="list-decimal space-y-3 pl-5">
             <li>Foreningen har et styre bestående av minimum fem medlemmer.</li>
             <li>Styremedlemmer velges for to år av gangen.</li>
@@ -219,7 +217,7 @@ export const Vedtekter = () => {
         </section>
 
         <section id="8" className="scroll-mt-20">
-          <h2 className="text-foreground">§8 Vedtektsendringer</h2>
+          <h2 className="text-xl text-foreground">§8 Vedtektsendringer</h2>
           <p>
             Endringer i disse vedtekter kan bare foretas på ordinært eller
             ekstraordinært årsmøte etter å ha vært på sakslisten, og det kreves
@@ -228,7 +226,9 @@ export const Vedtekter = () => {
         </section>
 
         <section id="9" className="scroll-mt-20">
-          <h2 className="text-foreground">§9 Oppløsning (kan ikke endres)</h2>
+          <h2 className="text-xl text-foreground">
+            §9 Oppløsning (kan ikke endres)
+          </h2>
           <ol className="list-decimal space-y-3 pl-5">
             <li>
               Oppløsning av foreningen kan bare behandles på ordinært årsmøte.
@@ -250,7 +250,7 @@ export const Vedtekter = () => {
         </section>
 
         <section id="10" className="scroll-mt-20">
-          <h2 className="text-foreground">§10 Signatur</h2>
+          <h2 className="text-xl text-foreground">§10 Signatur</h2>
           <p>
             Foreningen forpliktes av styreleder og et styremedlem i fellesskap.
           </p>

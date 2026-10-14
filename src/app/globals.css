@@ -118,6 +118,41 @@
     U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/space-mono-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/space-mono-latin-ext-400-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+    U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/space-mono-latin-700-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/space-mono-latin-ext-700-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+    U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
 /* Metric-matched Arial stand-ins, sitting right behind the real faces in the
    stacks below. `font-display: swap` still swaps, but the fallback now occupies
    exactly the same space, so the swap changes glyphs without reflowing the
@@ -143,137 +178,224 @@
 }
 
 /* =====================================================================
-   Design tokens, ported from trondheimdc.no (00-settings/tokens.css +
-   themes.css). Two tiers: primitive -> semantic. Dark is the default
-   theme; light applies via [data-theme="light"] (set by next-themes) or
-   via prefers-color-scheme before JS has run.
+   Design tokens: trondheimdc.no's, same names and values
+   (src/assets/css/00-settings/tokens.css + themes.css in that repo), which
+   are also the names checkin and regnskap use. Two tiers: primitive ->
+   semantic, and components use semantic tokens only. Dark is the default;
+   light applies via [data-theme="light"] (next-themes) or via
+   prefers-color-scheme before JS has run. Forening-only additions are
+   marked as such.
    ===================================================================== */
 :root {
-  /* Primitives */
+  /* Primitives: neutrals */
   --color-white-1: #fefefe;
   --color-white-2: #f4f4f4;
   --color-black: #0f0f0f;
   --color-black-2: #363636;
   --color-black-3: #292929;
 
+  /* Green */
   --color-green-1: #9bf7a9;
+  --color-green-2: #81ef92;
   --color-green-3: #67e47b;
+  --color-green-4: #142e18;
 
+  /* Purple */
   --color-purple-1: #bf9cf7;
+  --color-purple-2: #7163e9;
   --color-purple-3: #5241d8;
+  --color-purple-4: #20166a;
 
+  /* Red */
+  --color-red: #ff7e6c;
+  --color-red-2: #fe6650;
   --color-red-3: #f1422a;
   --color-red-4: #901a09;
 
+  /* Yellow */
   --color-yellow-1: #ffe7a7;
   --color-yellow-2: #ffd12e;
   --color-yellow-3: #faa31c;
+  --color-yellow-4: #eb7821;
 
+  /* Pink */
   --color-pink: #f0889c;
+  --color-pink-2: #e9718a;
+  --color-pink-3: #db5c76;
 
+  /* Blue */
   --color-blue-1: #70a7f9;
+  --color-blue-2: #5d8dd3;
+  --color-blue-3: #4d79bb;
 
-  /* Semantic, dark (default) */
-  --bg-base: var(--color-black);
-  --bg-surface: var(--color-black-2);
-  --fg-base: var(--color-white-1);
-  --fg-muted: color-mix(in srgb, var(--fg-base) 64%, var(--bg-base));
-  --fg-brand: var(--color-green-1);
-  --fg-brand-2: var(--color-purple-1);
-  --fg-brand-3: var(--color-yellow-1);
-  --fg-accent: var(--color-yellow-2);
-  --border: color-mix(in srgb, var(--fg-base) 16%, transparent);
-  --border-strong: color-mix(in srgb, var(--fg-base) 32%, transparent);
-  --danger: var(--color-red-3);
-  --overlay: color-mix(in srgb, var(--color-black) 72%, transparent);
-  /* Strength of the hero's copy scrim. Light mode needs more of it: the
-     photo goes greyscale under the luminosity blend there, so its midtones
-     land much closer to the text colour than they do on black. */
-  --hero-scrim: color-mix(in srgb, var(--bg-base) 50%, transparent);
-
+  /* Primitives: type. The "Fallback" faces are forening only (see above). */
   --font-family-sans: "IBM Plex Sans", "IBM Plex Sans Fallback", system-ui,
     -apple-system, "Segoe UI", sans-serif;
+  --font-family-mono: "Space Mono", ui-monospace, "SFMono-Regular", Consolas,
+    "Liberation Mono", Menlo, monospace;
   --font-family-display: "Space Grotesk", "Space Grotesk Fallback",
     var(--font-family-sans);
 
-  --radius: 8px;
+  /* Motion */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Semantic, dark (default) */
+  color-scheme: dark;
+
+  --color-bg-base: var(--color-black);
+  --color-bg-surface: var(--color-black-2);
+  --color-bg-success: var(--color-green-1);
+  --color-bg-warning: var(--color-yellow-3);
+  --color-bg-danger: var(--color-red-3);
+
+  --color-fg-base: var(--color-white-1);
+  --color-fg-brand: var(--color-green-1);
+  --color-fg-brand-2: var(--color-purple-1);
+  --color-fg-brand-3: var(--color-yellow-1);
+  --color-fg-brand-4: var(--color-yellow-3);
+  --color-fg-accent: var(--color-yellow-2);
+  --color-fg-accent-2: var(--color-pink);
+  --color-fg-accent-3: var(--color-blue-1);
+  --color-fg-always-dark: var(--color-black-3);
+
+  /* trondheimdc.no's site extensions */
+  --color-fg-muted: color-mix(in srgb, var(--color-fg-base) 64%, var(--color-bg-base));
+  --color-border: color-mix(in srgb, var(--color-fg-base) 16%, transparent);
+  --color-border-strong: color-mix(in srgb, var(--color-fg-base) 32%, transparent);
+  --color-overlay: color-mix(in srgb, var(--color-black) 72%, transparent);
+  --color-focus-ring: var(--color-fg-accent);
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 12px rgb(0 0 0 / 0.35);
+  --shadow-lg: 0 12px 32px rgb(0 0 0 / 0.45);
+
+  /* Forening only: strength of the hero's copy scrim. Light mode needs more
+     of it: the photo goes greyscale under the luminosity blend there, so its
+     midtones land much closer to the text colour than they do on black. */
+  --hero-scrim: color-mix(in srgb, var(--color-bg-base) 50%, transparent);
 }
 
 [data-theme="light"] {
   color-scheme: light;
-  --bg-base: var(--color-white-1);
-  --bg-surface: var(--color-white-2);
-  --fg-base: var(--color-black-3);
-  /* 70%, not dark mode's 64%: light mode's base is the darker of the two, so
-     the same mix lands at #767676, whose contrast against the page background
-     tops out at 4.28:1, under AA for body text no matter what is behind it.
-     70% lands at #696969 and clears 4.5:1 with a little room to spare. */
-  --fg-muted: color-mix(in srgb, var(--fg-base) 70%, var(--bg-base));
-  --fg-brand: var(--color-red-3);
-  --fg-brand-2: var(--color-purple-3);
-  --fg-brand-3: var(--color-yellow-3);
-  --fg-accent: var(--color-yellow-3);
-  --border: color-mix(in srgb, var(--fg-base) 14%, transparent);
-  --border-strong: color-mix(in srgb, var(--fg-base) 28%, transparent);
-  --danger: var(--color-red-4);
-  --overlay: color-mix(in srgb, var(--color-black) 55%, transparent);
-  --hero-scrim: color-mix(in srgb, var(--bg-base) 58%, transparent);
+  --color-bg-base: var(--color-white-1);
+  --color-bg-surface: var(--color-white-2);
+  --color-bg-success: var(--color-green-3);
+  --color-bg-warning: var(--color-yellow-1);
+  --color-bg-danger: var(--color-red);
+
+  --color-fg-base: var(--color-black-3);
+  /* Light-mode interactive/accent states use red; dark mode keeps green. */
+  --color-fg-brand: var(--color-red-3);
+  --color-fg-brand-2: var(--color-purple-3);
+  --color-fg-brand-3: var(--color-yellow-3);
+  --color-fg-brand-4: var(--color-yellow-2);
+  --color-fg-accent: var(--color-yellow-3);
+  --color-fg-accent-2: var(--color-pink-2);
+  --color-fg-accent-3: var(--color-blue-2);
+  --color-fg-always-dark: var(--color-black-3);
+
+  /* Forening only: 70%, not 64%. Light mode's base is the darker of the two,
+     so the same mix lands at #767676, whose contrast against the page
+     background tops out at 4.28:1, under AA for body text no matter what is
+     behind it. 70% lands at #696969 and clears 4.5:1 with a little room. */
+  --color-fg-muted: color-mix(in srgb, var(--color-fg-base) 70%, var(--color-bg-base));
+  --color-border: color-mix(in srgb, var(--color-fg-base) 14%, transparent);
+  --color-border-strong: color-mix(in srgb, var(--color-fg-base) 28%, transparent);
+  --color-overlay: color-mix(in srgb, var(--color-black) 55%, transparent);
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.08);
+  --shadow-md: 0 4px 12px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 12px 32px rgb(0 0 0 / 0.14);
+  --hero-scrim: color-mix(in srgb, var(--color-bg-base) 58%, transparent);
 }
 
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]):not([data-theme="light"]) {
     color-scheme: light;
-    --bg-base: var(--color-white-1);
-    --bg-surface: var(--color-white-2);
-    --fg-base: var(--color-black-3);
-    --fg-muted: color-mix(in srgb, var(--fg-base) 70%, var(--bg-base));
-    --fg-brand: var(--color-red-3);
-    --fg-brand-2: var(--color-purple-3);
-    --fg-brand-3: var(--color-yellow-3);
-    --fg-accent: var(--color-yellow-3);
-    --border: color-mix(in srgb, var(--fg-base) 14%, transparent);
-    --border-strong: color-mix(in srgb, var(--fg-base) 28%, transparent);
-    --danger: var(--color-red-4);
-    --overlay: color-mix(in srgb, var(--color-black) 55%, transparent);
-    --hero-scrim: color-mix(in srgb, var(--bg-base) 58%, transparent);
+    --color-bg-base: var(--color-white-1);
+    --color-bg-surface: var(--color-white-2);
+    --color-bg-success: var(--color-green-3);
+    --color-bg-warning: var(--color-yellow-1);
+    --color-bg-danger: var(--color-red);
+
+    --color-fg-base: var(--color-black-3);
+    /* Light-mode interactive/accent states use red; dark mode keeps green. */
+    --color-fg-brand: var(--color-red-3);
+    --color-fg-brand-2: var(--color-purple-3);
+    --color-fg-brand-3: var(--color-yellow-3);
+    --color-fg-brand-4: var(--color-yellow-2);
+    --color-fg-accent: var(--color-yellow-3);
+    --color-fg-accent-2: var(--color-pink-2);
+    --color-fg-accent-3: var(--color-blue-2);
+    --color-fg-always-dark: var(--color-black-3);
+
+    /* Forening only: 70%, not 64%. Light mode's base is the darker of the two,
+       so the same mix lands at #767676, whose contrast against the page
+       background tops out at 4.28:1, under AA for body text no matter what is
+       behind it. 70% lands at #696969 and clears 4.5:1 with a little room. */
+    --color-fg-muted: color-mix(in srgb, var(--color-fg-base) 70%, var(--color-bg-base));
+    --color-border: color-mix(in srgb, var(--color-fg-base) 14%, transparent);
+    --color-border-strong: color-mix(in srgb, var(--color-fg-base) 28%, transparent);
+    --color-overlay: color-mix(in srgb, var(--color-black) 55%, transparent);
+    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.08);
+    --shadow-md: 0 4px 12px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 12px 32px rgb(0 0 0 / 0.14);
+    --hero-scrim: color-mix(in srgb, var(--color-bg-base) 58%, transparent);
   }
 }
 
+/* shadcn's names on top of the tokens above, for the Tailwind utilities.
+   --color-border, --color-border-strong and --color-overlay map onto
+   themselves: Tailwind also writes them into its theme layer, but the
+   unlayered declarations above win the cascade, so the utilities get the
+   themed value. */
 @theme inline {
-  --color-background: var(--bg-base);
-  --color-foreground: var(--fg-base);
-  --color-card: var(--bg-surface);
-  --color-card-foreground: var(--fg-base);
-  --color-popover: var(--bg-surface);
-  --color-popover-foreground: var(--fg-base);
-  --color-muted: var(--bg-surface);
-  --color-muted-foreground: var(--fg-muted);
-  --color-border: var(--border);
-  --color-border-strong: var(--border-strong);
-  --color-input: var(--border-strong);
-  --color-ring: var(--fg-accent);
+  --color-background: var(--color-bg-base);
+  --color-foreground: var(--color-fg-base);
+  --color-card: var(--color-bg-surface);
+  --color-card-foreground: var(--color-fg-base);
+  --color-popover: var(--color-bg-surface);
+  --color-popover-foreground: var(--color-fg-base);
+  --color-muted: var(--color-bg-surface);
+  --color-muted-foreground: var(--color-fg-muted);
+  --color-border: var(--color-border);
+  --color-border-strong: var(--color-border-strong);
+  --color-input: var(--color-border-strong);
+  --color-ring: var(--color-focus-ring);
 
-  --color-primary: var(--fg-brand);
-  --color-primary-foreground: var(--bg-base);
-  --color-secondary: var(--fg-brand-2);
+  --color-primary: var(--color-fg-brand);
+  --color-primary-foreground: var(--color-fg-always-dark);
+  --color-secondary: var(--color-fg-brand-2);
   --color-secondary-foreground: var(--color-white-1);
-  --color-accent: var(--fg-accent);
-  --color-accent-foreground: var(--bg-base);
-  --color-destructive: var(--danger);
+  --color-accent: var(--color-fg-accent);
+  --color-accent-foreground: var(--color-fg-always-dark);
+  --color-destructive: var(--color-bg-danger);
   --color-destructive-foreground: var(--color-white-1);
+  --color-success: var(--color-bg-success);
+  --color-always-dark: var(--color-fg-always-dark);
 
   /* Brand extras, for one-off accents outside the shadcn palette */
-  --color-brand-pink: var(--color-pink);
-  --color-brand-blue: var(--color-blue-1);
-  --color-overlay: var(--overlay);
+  --color-brand-pink: var(--color-fg-accent-2);
+  --color-brand-blue: var(--color-fg-accent-3);
+  --color-overlay: var(--color-overlay);
 
   --font-sans: var(--font-family-sans);
   --font-display: var(--font-family-display);
+  --font-mono: var(--font-family-mono);
 
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 8px);
+  /* trondheimdc.no's radius scale */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
 
   --animate-float: float 6s ease-in-out infinite;
 }
@@ -298,11 +420,44 @@
   }
   body {
     @apply bg-background text-foreground font-sans;
+    line-height: 1.75;
   }
+  /* trondheimdc.no's heading scale (01-base/typography.css). A size class on
+     the element still wins, for the smaller in-page headings. */
   h1,
   h2,
   h3,
   h4 {
     @apply font-display;
+  }
+  h1 {
+    font-size: clamp(1.875rem, 1.5rem + 1.2vw, 2.5rem); /* 30 -> 40 */
+    line-height: 1.2;
+  }
+  h2 {
+    font-size: 1.875rem; /* 30 */
+    line-height: 1.35;
+  }
+  h3 {
+    font-size: 1.5rem; /* 24 */
+    font-weight: 700;
+    line-height: 1.35;
+  }
+  h4 {
+    font-size: 1.3125rem; /* 21 */
+    font-weight: 700;
+    line-height: 1.5;
+  }
+}
+
+@layer components {
+  /* The hero's big title, as trondheimdc.no's .text-display. */
+  .text-display {
+    font-family: var(--font-family-display);
+    font-size: clamp(3rem, 2.2rem + 2.5vw, 4rem); /* 48 -> 64 */
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    overflow-wrap: break-word;
   }
 }
