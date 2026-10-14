@@ -1,6 +1,6 @@
-import Head from "next/head"
 import Link from "next/link"
 import { useTranslation } from "react-i18next"
+import { Seo } from "@/components/Seo"
 
 // Deliberately evergreen: the page is meant to sit up between conferences as
 // standing information, so the only thing that goes stale is the date, which
@@ -13,10 +13,11 @@ const CommunityStand = () => {
 
   return (
     <>
-      <Head>
-        <title>{`TrondheimDC | ${t("title")}`}</title>
-        <meta name="description" content={t("intro")} />
-      </Head>
+      <Seo
+        title={t("title")}
+        description={t("intro")}
+        path="/community-stand"
+      />
       <div className="mx-auto max-w-2xl px-4 py-20 sm:px-6">
         <h1 className="text-4xl">{t("title")}</h1>
         <p className="mt-4 text-muted-foreground">{t("intro")}</p>

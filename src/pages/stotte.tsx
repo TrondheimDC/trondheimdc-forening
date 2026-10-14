@@ -1,5 +1,5 @@
-import Head from "next/head"
 import { useTranslation } from "react-i18next"
+import { Seo } from "@/components/Seo"
 
 const Stotte = () => {
   const { t } = useTranslation("common", { keyPrefix: "stotte" })
@@ -9,9 +9,7 @@ const Stotte = () => {
 
   return (
     <>
-      <Head>
-        <title>{`TrondheimDC | ${t("title")}`}</title>
-      </Head>
+      <Seo title={t("title")} description={t("intro")} path="/stotte" />
       <div className="mx-auto max-w-2xl px-4 py-20 sm:px-6">
         <h1 className="text-4xl">{t("title")}</h1>
         <p className="mt-4 text-muted-foreground">{t("intro")}</p>

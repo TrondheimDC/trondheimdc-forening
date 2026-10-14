@@ -1,5 +1,8 @@
 {
   "notFound": "Not found",
+  "meta": {
+    "description": "TrondheimDC is the association behind the TDC conference, and supports the local, volunteer-run IT community in the Trondheim region."
+  },
   "menu": {
     "skipToContent": "Skip to content",
     "toggle": "Menu",
@@ -93,7 +96,8 @@
   },
   "vedtekter": {
     "title": "Bylaws",
-    "note": "The bylaws are only available in Norwegian, since the Norwegian text is the legally binding one."
+    "note": "The bylaws are only available in Norwegian, since the Norwegian text is the legally binding one.",
+    "description": "The bylaws of the association TrondheimDC, org. no. 936657788."
   },
   "footer": {
     "utlegg": "Expense form",

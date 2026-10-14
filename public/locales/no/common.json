@@ -1,5 +1,8 @@
 {
   "notFound": "Ikke funnet",
+  "meta": {
+    "description": "TrondheimDC er foreningen bak TDC-konferansen og støtter det lokale, frivillige IT-fagmiljøet i Trondheimsregionen."
+  },
   "menu": {
     "skipToContent": "Hopp til innhold",
     "toggle": "Meny",
@@ -93,7 +96,8 @@
   },
   "vedtekter": {
     "title": "Vedtekter",
-    "note": "Vedtektene finnes bare på norsk, fordi det er den norske teksten som gjelder juridisk."
+    "note": "Vedtektene finnes bare på norsk, fordi det er den norske teksten som gjelder juridisk.",
+    "description": "Vedtektene til foreningen TrondheimDC, org.nr 936657788."
   },
   "footer": {
     "utlegg": "Utleggsskjema",

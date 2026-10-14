@@ -1,5 +1,5 @@
-import Head from "next/head"
 import { useTranslation } from "react-i18next"
+import { Seo } from "@/components/Seo"
 
 const SECTIONS = [
   { id: "1", title: "§1 Navn" },
@@ -19,9 +19,11 @@ const Vedtekter = () => {
 
   return (
     <>
-      <Head>
-        <title>{`TrondheimDC | ${t("title")}`}</title>
-      </Head>
+      <Seo
+        title={t("title")}
+        description={t("description")}
+        path="/vedtekter"
+      />
       <div className="mx-auto max-w-2xl px-4 py-20 sm:px-6">
         <h1 lang="no" className="text-4xl">
           Vedtekter for TrondheimDC

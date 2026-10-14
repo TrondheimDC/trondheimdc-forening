@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Add a <url> here for every new page. /støtte is left out: it renders /stotte, and its canonical points there. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://forening.trondheimdc.no/</loc></url>
+  <url><loc>https://forening.trondheimdc.no/stotte</loc></url>
+  <url><loc>https://forening.trondheimdc.no/community-stand</loc></url>
+  <url><loc>https://forening.trondheimdc.no/vedtekter</loc></url>
+</urlset>

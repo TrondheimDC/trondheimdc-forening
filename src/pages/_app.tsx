@@ -40,6 +40,17 @@ const AppShell = ({ Component, pageProps }: AppProps) => {
           href="/fonts/space-grotesk-latin-400-normal.woff2"
           crossOrigin="anonymous"
         />
+        {/* Browser chrome on mobile, matched to --bg-base in each theme. */}
+        <meta
+          name="theme-color"
+          content="#fefefe"
+          media="(prefers-color-scheme: light)"
+        />
+        <meta
+          name="theme-color"
+          content="#0f0f0f"
+          media="(prefers-color-scheme: dark)"
+        />
         {/* Rendered from public/icon.svg by scripts/build-icons.mjs. */}
         <link rel="icon" href="/favicon.ico" sizes="48x48" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
