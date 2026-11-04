@@ -17,6 +17,13 @@ const SOCIALS = [
     path: "M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.04 1.47-4.04 4.16v2.32H7.5V13h2.73v8z",
   },
   {
+    name: "Instagram",
+    href: "https://www.instagram.com/trondheimdc/",
+    // Outline icon: rounded square, lens ring and dot, drawn as filled rings.
+    path: "M8 3h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zm0 1.8A3.2 3.2 0 0 0 4.8 8v8A3.2 3.2 0 0 0 8 19.2h8a3.2 3.2 0 0 0 3.2-3.2V8A3.2 3.2 0 0 0 16 4.8zM12 7.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 1.8a2.7 2.7 0 1 1 0 5.4 2.7 2.7 0 0 1 0-5.4zM17.4 5.5a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2z",
+    evenodd: true,
+  },
+  {
     name: "YouTube",
     href: "https://www.youtube.com/@trondheimdc/videos",
     path: "M23 7.5a3 3 0 0 0-2.1-2.12C19.05 4.9 12 4.9 12 4.9s-7.05 0-8.9.48A3 3 0 0 0 1 7.5C.5 9.36.5 12 .5 12s0 2.64.5 4.5a3 3 0 0 0 2.1 2.12c1.85.48 8.9.48 8.9.48s7.05 0 8.9-.48A3 3 0 0 0 23 16.5c.5-1.86.5-4.5.5-4.5s0-2.64-.5-4.5zM9.75 15.5v-7l6 3.5z",
@@ -74,7 +81,10 @@ export const Footer = () => {
                     fill="currentColor"
                     aria-hidden="true"
                   >
-                    <path d={social.path} />
+                    <path
+                      d={social.path}
+                      fillRule={social.evenodd ? "evenodd" : undefined}
+                    />
                   </svg>
                 </a>
               </li>
