@@ -35,15 +35,17 @@ export default function RootLayout({
     // suppressHydrationWarning: next-themes sets data-theme before React loads.
     <html lang="no" suppressHydrationWarning>
       <head>
-        {/* The two faces that render above the fold everywhere: body copy and
-            headings. Without these the browser only discovers the fonts after
-            it has parsed the stylesheet, which is what makes the swap from the
-            fallback visible. The remaining weights and the latin-ext subsets
-            stay lazy. They are rarely, if ever, needed on first paint.
-            Headings are 400, not 700: Tailwind's preflight resets h1-h6 to
+        {/* The faces that render above the fold everywhere: body copy,
+            headings and the CTA buttons. Without these the browser only
+            discovers the fonts after it has parsed the stylesheet, which is
+            what makes the swap from the fallback visible. The remaining
+            weights and the latin-ext subsets stay lazy. They are rarely, if
+            ever, needed on first paint.
+            Headings are 400: Tailwind's preflight resets h1-h6 to
             `font-weight: inherit`, so they inherit the body's weight and only
-            the display family changes. Preloading Space Grotesk 700 here
-            fetches a file no heading on the page asks for. */}
+            the display family changes. Buttons are `font-display
+            font-semibold`, and with no Space Grotesk 600 file the browser
+            resolves 600 to the 700 face, so that one is preloaded too. */}
         <link
           rel="preload"
           as="font"
@@ -56,6 +58,13 @@ export default function RootLayout({
           as="font"
           type="font/woff2"
           href="/fonts/space-grotesk-latin-400-normal.woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          href="/fonts/space-grotesk-latin-700-normal.woff2"
           crossOrigin="anonymous"
         />
       </head>
