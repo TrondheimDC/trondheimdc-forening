@@ -44,14 +44,13 @@ const IMAGES = [
   // the .webp itself stays big enough to fill a viewport.
   ...[
     "tdc-duck-clarion",
+    "tdc2026-komite",
     "tdc2024-1",
     "tdc2024-3",
     "tdc2024-17",
     "tdc2024-22",
     "tdc2024-27",
-    "tdc2024-145",
     "tdc2025-lykt-6932",
-    "tdc2025-lykt-6950",
     "tdc2025-lykt-7071",
     "tdc2025-lykt-7075",
     "tdc2025-lykt-7159",

@@ -4,16 +4,17 @@ import Image from "next/image"
 import { useState } from "react"
 import Lightbox from "yet-another-react-lightbox"
 import Captions from "yet-another-react-lightbox/plugins/captions"
+import Zoom from "yet-another-react-lightbox/plugins/zoom"
 
 import "yet-another-react-lightbox/styles.css"
 import "yet-another-react-lightbox/plugins/captions.css"
 
 // Credits per docs/PHOTO-CREDITS.md.
 const CREDIT_TERJE_TROBE = "© TDC - Tech from Trondheim, Terje Trobe"
-const CREDIT_LYKT = "© TDC - Tech from Trondheim, LYKT Foto og Film"
+const CREDIT_LYKT = "© TDC - Tech from Trondheim, LYKT"
 
-const YEARS_2024 = [1, 3, 17, 22, 27, 145]
-const LYKT_2025 = [6950, 7160, 6932, 7071, 7075, 7159]
+const YEARS_2024 = [1, 3, 17, 22, 27]
+const LYKT_2025 = [7160, 6932, 7071, 7075, 7159]
 
 const PHOTOS = [
   {
@@ -21,6 +22,12 @@ const PHOTOS = [
     alt: "TDC-duken utenfor Clarion Hotel Trondheim",
     portrait: true,
     credit: undefined,
+  },
+  {
+    src: "/img/photos/tdc2026-komite.webp",
+    alt: "Programkomiteen 2026 foran TDC-duken",
+    portrait: false,
+    credit: CREDIT_LYKT,
   },
   ...LYKT_2025.map((n) => ({
     src: `/img/photos/tdc2025-lykt-${n}.webp`,
@@ -83,8 +90,12 @@ export const PhotoStrip = () => {
           alt: photo.alt,
           description: photo.credit,
         }))}
-        plugins={[Captions]}
+        plugins={[Captions, Zoom]}
         captions={{ descriptionTextAlign: "center" }}
+        // Pinch and double-tap on touch, buttons and wheel on desktop. The
+        // default cap is 1 image pixel per screen pixel, which on a phone
+        // barely zooms a 1600px photo, so allow a bit past that.
+        zoom={{ maxZoomPixelRatio: 2 }}
       />
     </section>
   )
