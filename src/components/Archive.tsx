@@ -61,12 +61,12 @@ export const Archive = () => {
                   sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
                   className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pt-6 pb-2">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pt-6 pb-2 flex flex-col-reverse sm:flex-row sm:items-baseline">
                   <span className="text-sm font-semibold text-white">
                     {entry.year}
                   </span>
                   {badge && (
-                    <span className="ml-2 text-[11px] text-primary">
+                    <span className="text-[11px] text-primary sm:ml-2">
                       {badge}
                     </span>
                   )}

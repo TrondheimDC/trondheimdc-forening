@@ -9,13 +9,7 @@ const YEARS = [
   { year: 2017, url: "https://2017.trondheimdc.no" },
   { year: 2018, url: "https://2018.trondheimdc.no" },
   { year: 2019, url: "https://2019.trondheimdc.no" },
-  // TDC Community Week. The site is gone, so this captures the Wayback
-  // Machine snapshot, with its toolbar removed.
-  {
-    year: 2021,
-    url: "https://web.archive.org/web/20211128171233/https://2021.trondheimdc.no/",
-    wayback: true,
-  },
+  { year: 2021, url: "https://2021.trondheimdc.no" },
   { year: 2023, url: "https://2023.trondheimdc.no" },
   { year: 2024, url: "https://2024.trondheimdc.no" },
   { year: 2025, url: "https://2025.trondheimdc.no" },
@@ -26,29 +20,23 @@ const YEARS = [
 
 const browser = await chromium.launch()
 
-async function capture(url, dest, colorScheme, wayback) {
+async function capture(url, dest, colorScheme) {
   const page = await browser.newPage({
     viewport: { width: 1280, height: 800 },
     colorScheme,
   })
   await page.goto(url, {
-    waitUntil: wayback ? "networkidle" : "load",
-    timeout: wayback ? 90000 : 20000,
+    waitUntil: "load",
+    timeout: 20000,
   })
-  if (wayback) {
-    await page.evaluate(() => {
-      document.getElementById("wm-ipp-base")?.remove()
-      document.getElementById("wm-ipp-print")?.remove()
-    })
-  }
   await page.waitForTimeout(1000)
   await page.screenshot({ path: dest, type: "jpeg", quality: 70 })
   await page.close()
 }
 
-for (const { year, url, dark, wayback } of YEARS) {
+for (const { year, url, dark } of YEARS) {
   try {
-    await capture(url, `public/img/archive/${year}.jpg`, "light", wayback)
+    await capture(url, `public/img/archive/${year}.jpg`, "light")
     console.log(`ok   ${year} -> public/img/archive/${year}.jpg`)
     if (dark) {
       await capture(url, `public/img/archive/${year}-dark.jpg`, "dark")
