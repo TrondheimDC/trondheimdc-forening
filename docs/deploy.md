@@ -26,7 +26,7 @@ push to main
 
 ## 2. Server (one-time)
 
-DNS already resolves: `forening.trondheimdc.no` is covered by the wildcard CNAME to `worldwide.trondheimdc.no`.
+DNS already resolves: `forening.trondheimdc.no` has its own CNAME record to `worldwide.trondheimdc.no`. There is no wildcard, so each new subdomain needs its own CNAME to `worldwide.trondheimdc.no`.
 
 ```bash
 # From your machine

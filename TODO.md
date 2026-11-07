@@ -10,7 +10,7 @@
 
 - [ ] **nginx vhost + TLS cert** for `forening.trondheimdc.no`: run
       `docs/setup-server.sh`, see `docs/deploy.md`. DNS already resolves
-      (wildcard CNAME via `worldwide.trondheimdc.no`).
+      (own CNAME to `worldwide.trondheimdc.no`; no wildcard).
 - [ ] Confirm `SSH_HOST` / `SSH_USER` / `SSH_PRIVATE_KEY` org secrets (used by
       `.github/workflows/cd.yml`) have access to
       `/var/www/sites/forening.trondheimdc.no/public`.
