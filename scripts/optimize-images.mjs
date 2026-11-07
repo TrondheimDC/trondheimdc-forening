@@ -32,11 +32,10 @@ const IMAGES = [
   // Archive screenshots. The grid tops out at four columns inside a
   // `max-w-6xl`, so a card is ~270px wide; these are 1280px-wide captures.
   ...[
-    2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2023, 2024, 2025, 2026,
+    2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2023, 2024, 2025,
+    2026,
   ].map((year) => ({ src: `public/img/archive/${year}.jpg`, width: 640 })),
   { src: "public/img/archive/2026-dark.jpg", width: 640 },
-  // Not a screenshot but a static graphic; see the note in data/archive.ts.
-  { src: "public/img/archive/2021.png", width: 640 },
 
   // Strip photos. These are the one place two sizes are worth it: the strip
   // shows them ~320px wide, but clicking one opens it full-screen in the

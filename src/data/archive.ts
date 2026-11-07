@@ -8,8 +8,8 @@ export type ArchiveYear = {
 
 // The full run of TDC editions. 2020 and 2022 are unlinked with no
 // conference (pandemic / nothing happened). 2021 had TDC Community Week
-// instead of a full conference, and there's no surviving site for it, so
-// `image` points at a static graphic rather than a screenshot.
+// instead of a full conference. Its site is gone, so it links to and is
+// captured from the Wayback Machine snapshot.
 //
 // For entries with a `url`, `image`/`darkImage` are static screenshots of
 // the site, captured with scripts/capture-archive-screenshots.mjs. If an old
@@ -59,7 +59,7 @@ export const archiveYears: ArchiveYear[] = [
   { year: 2020, url: null, note: "notHeld" },
   {
     year: 2021,
-    url: null,
+    url: "https://web.archive.org/web/20211128171233/https://2021.trondheimdc.no/",
     note: "communityWeek",
     image: "/img/archive/2021.webp",
   },
